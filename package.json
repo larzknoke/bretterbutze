@@ -1,15 +1,10 @@
 {
-	"name": "pugsum",
+	"name": "bretterbutze",
 	"version": "1.0.0",
 	"description": "",
 	"keywords": [
-		"11ty",
-		"eleventy",
-		"scss",
-		"tailwind",
-		"webpack",
-		"purgecss",
-		"pug"
+		"Bretterbutze",
+		"Groemitz"
 	],
 	"dependencies": {},
 	"devDependencies": {
@@ -74,10 +69,10 @@
 		"update-check": "npx npm-check-updates",
 		"serve": "npx live-server ./dist --port=8080 --host=localhost"
 	},
-	"author": "Victor Tsang",
+	"author": "Lars Knoke",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/vktrwlt/pugsum.git"
+		"url": "git+https://github.com/larzknoke/bretterbutze.git"
 	}
 }

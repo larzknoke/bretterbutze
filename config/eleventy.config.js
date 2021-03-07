@@ -19,6 +19,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy({ "src/static/": "/" });
 	eleventyConfig.addPassthroughCopy({ "src/assets/images": "/assets/images" });
 	eleventyConfig.addPassthroughCopy({ "src/assets/js": "/assets/js" });
+	eleventyConfig.addPassthroughCopy({ "src/*.php": "/" });
 
 	return {
 		dir: {

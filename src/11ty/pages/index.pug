@@ -1,684 +1,667 @@
-doctype html
-include ../_includes/mixins/mixins.pug
-head
-	title Bretterbutze Strandallee | Gr&ouml;mitz
-	meta(name='description', content='Willkommen in der Bretterbutze Grömitz. Unsere Antwort auf Erhohlung, Strand und Meer mitten im Herzen von Grömitz!')
-	meta(charset='utf-8')
-	meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
-	script(defer='defer', src='https://www.google.com/recaptcha/api.js')
-	link(rel='stylesheet', href='assets/css/main.css')
-	noscript
-		link(rel='stylesheet', href='assets/css/noscript.css')
-// Page Wrapper
-#page-wrapper
-	// Wrapper
-	#wrapper
-		// Panel (Banner)
-		section.panel.banner.color4-alt.right.start-section(style='position: relative')
-			.menu
-				a(href='#warum') Warum Bretterbutze?
-				a(href='#butze') Die Butze
-				a(href='#preise') Preise
-				a(href='#gallerie') Gallerie
-				a(href='#sport') Sport
-				a(href='#events') Events
-				a(href='#outbox') Out of the Box
-				a(href='#kontakt') Kontakt
-			.content.color2.span-4-75.start-content(style='position: relative')
-				.panel-bg-start
-				.burger.toggle
-					span
-				h1.major
-					| Willkommen in der
-					br
-					|               Bretterbutze Gr&ouml;mitz
-					br
-				p(style='max-width: 80%; z-index: 1000')
-					| Unsere Antworten auf 
-					strong Erholung, Strand und Meer
-					|  in
-					br
-					strong &bdquo;Lu&#x308;becker&rsquo;s&ldquo; Bester Bucht!
-				h3(style='display: inline; margin: 8px 15px 0 0')
-					| Hier geht&apos;s zu unseren Butzen:
-				ul.actions(style='\
-				display: flex;\
-				align-items: left;\
-				justify-content: space-between;\
-				flex-direction: column;\
-				')
-					li
-						a(href='#') Strandallee
-					li
-						a(href='#') #Terrassenbutze
-					li
-						a(href='#') Meer.Blick.Butze
-			.image.filtered.span-2-25(data-position='25% 35%')
-				+picture("/assets/images","logo_groemitz",['jpg'], alt="")
-		// Panel (Spotlight)
-		section.panel.spotlight.medium.right
-			.content.span-7
-				//
-					<h2 class="major">Sed etiam aenean</h2>
-					<p>Mauris et ligula arcu. Proin dapibus convallis accumsan. Lorem maximus hendrerit orci, sit amet elementum massa hendrerit sed. Donec et ullamcorper ligula. Suspendisse amet potenti. Ut pretium libero eleifend euismod sed tristique. Quisque dictum magna risus, id ultricies justo sagittis vitae. Sed id odio tempor, porttitor elit amet, gravida hendrerit fringilla lorem ipsum dolor.</p>
-			.image.filtered.tinted(data-position='bottom')
-				+picture("/assets/images","butzen/strandallee/Bretterbutze-1",['jpg'], alt="")
-		// Panel (Spotlight)
-		section#warum.panel.color4-alt
-			.inner.columns.divided
-				.content.span-2-5
-					h2.major Warum Bretterbutze?
-					p
-						| Easy! 
-						strong ERSTE REIHE
-						| , Strandallee,
-						strong mit oder ohne Meer.Blick.
-						| , oder entspannt am
-						strong Berg mit Sonnendeck!
-				.content.span-2-75
-					h2.major
-						| Wer
-						svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 594.01 511.65', height='50', width='50', style='margin: -10px 5px')
-							defs
-								style.
-									.cls-1 {
-									fill: #db6c6e;
-									}
-							g#Ebene_2(data-name='Ebene 2')
-								g#Object
-									path.cls-1(d='M594,155.45C594,69.74,524.28,0,438.59,0A155.65,155.65,0,0,0,297,91.38,155.58,155.58,0,0,0,155.44,0C69.71,0,0,69.74,0,155.45A155.86,155.86,0,0,0,55,274L292.1,509.47a7.41,7.41,0,0,0,5.27,2.18,7.49,7.49,0,0,0,5.32-2.18l245.89-244.3,0,0A154.65,154.65,0,0,0,594,155.45Z')
-						|                 die Bretterbutze?
-					p
-						| Alle Halunken (m/w/d), die den alten Schinken und 0815 Buden
-						| satt haben, aber auf keinen Fall auf ne Kelle Style und Komfort
-						| verzichten wollen.
+extends ../_includes/layouts/default.pug
+
+block content
+	#page-wrapper
+		#wrapper
+			section.panel.banner.color4-alt.right.start-section(style='position: relative')
+				.menu
+					a(href='#warum') Warum Bretterbutze?
+					a(href='#butze') Die Butze
+					a(href='#preise') Preise
+					a(href='#gallerie') Gallerie
+					a(href='#sport') Sport
+					a(href='#events') Events
+					a(href='#outbox') Out of the Box
+					a(href='#kontakt') Kontakt
+				.content.color2.span-4-75.start-content(style='position: relative')
+					.panel-bg-start
+					.burger.toggle
+						span
+					h1.major
+						| Willkommen in der
 						br
+						|               Bretterbutze Gr&ouml;mitz
 						br
-						strong &ldquo;Alles Dope, wenn Du da bist&rdquo;, Cro
-		// Panel
-		section.panel.banner.left
-			.image.span-2.filtered.tinted(data-position='center')
-				+picture("/assets/images","butzen/strandallee/Bretterbutze-14",['jpg'], alt="")
-		section#butze.panel.banner.left.color2
-			.intro.color2
-				h1.major Die Butzen
-		section.panel.spotlight.small.left.color2.butzen.strandallee-modal(style='width: 18rem')
-			.content
-				h2.major Strandallee
-				h3.on-hover Details hier!
-			.image.filtered.tinted.hover(data-position='center')
-				+picture("/assets/images","butzen/strandallee/Bretterbutze-7",['jpg'], alt="")
-		section.panel.spotlight.small.left.color2.butzen.terrassenbutze-modal(style='width: 18rem')
-			.content
-				h2.major #Terrassenbutze
-				h3.on-hover Details hier!
-			.image.filtered.tinted.hover(data-position='center')
-				+picture("/assets/images","butzen/terassenbutze/1",['jpg'], alt="")
-		section.panel.spotlight.small.left.color2.butzen.meerblickbutze-modal(style='width: 18rem')
-			.content
-				h2.major Meer.Blick.Butze
-				h3.on-hover Under Construction!
-			.image.filtered.tinted.hover(data-position='center')
-				+picture("/assets/images","renovieren",['jpg'], alt="")
-		//
-			<section class="panel banner left color2" id="butze">
-			<div class="intro color2">
-			<h1 class="major">Die Butze</h1>
-			</div>
-			<div class="inner columns aligned">
-			<div class="span-2-25" style="z-index: 100">
-			<h3 class="major">BOSS Size</h3>
-			<span>Nicht viel sabbeln...Details in a nutshell:</span>
-			<ul class="altOFF">
-			<li>2 ZKB I 40qm I 4 Piraten (m/w/d)</li>
-			<li>Rainforest Duschkabine mit Fön</li>
-			</ul>
-			<h3 class="major">VALUE for Money</h3>
-			<span>All Inclusive Butzen</span>
-			<ul class="altOFF">
-			<li style="line-height: 20px">
-			Doppelbett 140*200 <br />
-			<span style="font-size: 0.85em"
-			>(Bitte vergesst Eure Schnuffelbettwäsche nicht!)</span
-			>
-			</li>
-			<li>Schlafcouch</li>
-			<li>Flat TV</li>
-			<li>Playstation 1</li>
-			<li>Marshall Bluetooth Boom Box</li>
-			</ul>
-			</div>
-			<div class="span-2-25" style="z-index: 100">
-			<h3 class="major">Kitchen Highlights</h3>
-			<ul class="altOFF">
-			<li>Herd, Ceranfeld, Spülmaschine</li>
-			<li>Russel & Hobbs Toaster & Wasserkocher</li>
-			<li>Nespresso Kaffemaschine</li>
-			</ul>
-			<br />
-			</div>
-			<div class="surfer-bg"></div>
-			</div>
-			</section>
-		// Panel
-		section#preise.panel.color4-alt
-			.inner.columns.divided
-				.span-1-5
-					h1.major Kalender
-					br
+					p(style='max-width: 80%; z-index: 1000')
+						| Unsere Antworten auf 
+						strong Erholung, Strand und Meer
+						|  in
+						br
+						strong &bdquo;Lu&#x308;becker&rsquo;s&ldquo; Bester Bucht!
+					h3(style='display: inline; margin: 8px 15px 0 0')
+						| Hier geht&apos;s zu unseren Butzen:
+					ul.actions(style='\
+					display: flex;\
+					align-items: left;\
+					justify-content: space-between;\
+					flex-direction: column;\
+					')
+						li
+							a(href='#') Strandallee
+						li
+							a(href='#') #Terrassenbutze
+						li
+							a(href='#') Meer.Blick.Butze
+				.image.filtered.span-2-25(data-position='25% 35%')
+					+picture("/assets/images","logo_groemitz",['jpg'], alt="")
+			// Panel (Spotlight)
+			section.panel.spotlight.medium.right
+				.content.span-7
 					//
-						<div class="table-wrapper">
-						<table>
-						<tbody>
-						<tr>
-						<td>Ollie Season</td>
-						<td>(4.10.-1.11.19)</td>
-						<td>65€/N</td>
-						</tr>
-						<tr>
-						<td>Kick Flip Season</td>
-						<td>(1.11.-23.12.19)</td>
-						<td>70€/N</td>
-						</tr>
-						<tr>
-						<td>360* Flip Season</td>
-						<td>(23.12.-11.01.20)</td>
-						<td>85€/N</td>
-						</tr>
-						</tbody>
-						</table>
-						</div>
-				.span-5
-					#traumfewo-calendar-274779.tfw-calendar-app(data-base_url='www.traum-ferienwohnungen.de', data-language_id='1', data-startmonth='0', data-numberofmonths='3', data-listingid='274779')
-						a#calendar-link-274779(href='https://traum-ferienwohnungen.de/274779')
-							| Ferienwohnung Bretterbutze Strandallee auf
-							| traum-ferienwohnungen.de
-					script(src='https://static2.traum-ferienwohnungen.de/vmb-public/cache/js/calendarWidget.js', type='application/javascript')
-					script(type='application/javascript').
-						function createWidget274779() {
-						var calendarNode = document.getElementById(
-						"traumfewo-calendar-274779"
-						);
-						var calendarWidget = new window.tfw.CalendarWidget(
-						calendarNode
-						);
-						calendarWidget.throttle("resize", "optimizedResize");
-						window.addEventListener(
-						"resize",
-						function () {
-						calendarWidget.update();
-						},
-						false
-						);
-						calendarWidget.init();
-						}
-						window.addEventListener(
-						"load",
-						function (event) {
-						createWidget274779();
-						},
-						false
-						);
-						if (window.tfw && window.tfw.CalendarWidget) {
-						createWidget274779();
-						}
-		section#gallerie.panel
-			.gallery
-				.group.span-3
-					a.image.filtered.span-3(href='assets/images/butzen/strandallee/Bretterbutze-1.jpg', data-position='center')
-						+picture("/assets/images","butzen/strandallee/Bretterbutze-1",['jpg'], alt="")
-					a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/Bretterbutze-12.jpg', data-position='center')
-						+picture("/assets/images","butzen/strandallee/Bretterbutze-12",['jpg'], alt="")
-					a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/Bretterbutze-6.jpg', data-position='bottom')
-						+picture("/assets/images","butzen/strandallee/Bretterbutze-6",['jpg'], alt="")
-				a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/Bretterbutze-7.jpg', data-position='top')
+						<h2 class="major">Sed etiam aenean</h2>
+						<p>Mauris et ligula arcu. Proin dapibus convallis accumsan. Lorem maximus hendrerit orci, sit amet elementum massa hendrerit sed. Donec et ullamcorper ligula. Suspendisse amet potenti. Ut pretium libero eleifend euismod sed tristique. Quisque dictum magna risus, id ultricies justo sagittis vitae. Sed id odio tempor, porttitor elit amet, gravida hendrerit fringilla lorem ipsum dolor.</p>
+				.image.filtered.tinted(data-position='bottom')
+					+picture("/assets/images","butzen/strandallee/Bretterbutze-1",['jpg'], alt="")
+			// Panel (Spotlight)
+			section#warum.panel.color4-alt
+				.inner.columns.divided
+					.content.span-2-5
+						h2.major Warum Bretterbutze?
+						p
+							| Easy! 
+							strong ERSTE REIHE
+							| , Strandallee,
+							strong mit oder ohne Meer.Blick.
+							| , oder entspannt am
+							strong Berg mit Sonnendeck!
+					.content.span-2-75
+						h2.major
+							| Wer
+							svg(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 594.01 511.65', height='50', width='50', style='margin: -10px 5px')
+								defs
+									style.
+										.cls-1 {
+										fill: #db6c6e;
+										}
+								g#Ebene_2(data-name='Ebene 2')
+									g#Object
+										path.cls-1(d='M594,155.45C594,69.74,524.28,0,438.59,0A155.65,155.65,0,0,0,297,91.38,155.58,155.58,0,0,0,155.44,0C69.71,0,0,69.74,0,155.45A155.86,155.86,0,0,0,55,274L292.1,509.47a7.41,7.41,0,0,0,5.27,2.18,7.49,7.49,0,0,0,5.32-2.18l245.89-244.3,0,0A154.65,154.65,0,0,0,594,155.45Z')
+							|                 die Bretterbutze?
+						p
+							| Alle Halunken (m/w/d), die den alten Schinken und 0815 Buden
+							| satt haben, aber auf keinen Fall auf ne Kelle Style und Komfort
+							| verzichten wollen.
+							br
+							br
+							strong &ldquo;Alles Dope, wenn Du da bist&rdquo;, Cro
+			// Panel
+			section.panel.banner.left
+				.image.span-2.filtered.tinted(data-position='center')
+					+picture("/assets/images","butzen/strandallee/Bretterbutze-14",['jpg'], alt="")
+			section#butze.panel.banner.left.color2
+				.intro.color2
+					h1.major Die Butzen
+			section.panel.spotlight.small.left.color2.butzen.strandallee-modal(style='width: 18rem')
+				.content
+					h2.major Strandallee
+					h3.on-hover Details hier!
+				.image.filtered.tinted.hover(data-position='center')
 					+picture("/assets/images","butzen/strandallee/Bretterbutze-7",['jpg'], alt="")
-				.group.span-3
-					a.image.filtered.span-3(href='assets/images/butzen/strandallee/Bretterbutze-9.jpg', data-position='center')
-						+picture("/assets/images","butzen/strandallee/Bretterbutze-9",['jpg'], alt="")
-					a.image.filtered.span-1-5(href='assets/images/stock/wasser.jpg', data-position='center')
-						+picture("/assets/images","stock/wasser",['jpg'], alt="")
-					a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/Bretterbutze-2.jpg', data-position='bottom')
-						+picture("/assets/images","butzen/strandallee/Bretterbutze-2",['jpg'], alt="")
-				// <a href="images/butzen/strandallee/Bretterbutze-5.jpg" class="image filtered span-3" data-position="bottom"><img src="images/butzen/strandallee/Bretterbutze-5.jpg" alt="" /></a>
-				a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/Bretterbutze-10.jpg', data-position='center')
-					+picture("/assets/images","butzen/strandallee/Bretterbutze-10",['jpg'], alt="")
-				.group.span-3
-					a.image.filtered.span-3(href='assets/images/butzen/strandallee/bad3.jpg', data-position='center')
-						+picture("/assets/images","butzen/strandallee/bad3",['jpg'], alt="")
-					a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/tasse.jpg', data-position='center')
-						+picture("/assets/images","butzen/strandallee/tasse",['jpg'], alt="")
-					a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/bad1.jpg', data-position='center')
-						+picture("/assets/images","butzen/strandallee/bad1",['jpg'], alt="")
-				a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/bad2.jpg', data-position='center')
-					+picture("/assets/images","butzen/strandallee/bad2",['jpg'], alt="")
-				// <a href="images/butzen/strandallee/tasse.jpg" class="image filtered span-2-5" data-position="center"><img src="images/butzen/strandallee/tasse.jpg"alt="" /></a>
-		section#sport.panel.spotlight.large.left
-			.content.span-4-5
-				h1.major Sport
-				h3 SURF &amp; TURF
-				p
-					| In Kooperation mit unseren Freunden vom Team Wassersport Gr&ouml;mitz
-					| und dem Mann am Segel J&ouml;rg wird das Wasser Euer Element Nr. 1.
-				a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://www.wassersport-groemitz.de/station/team.html') www.wassersport-groemitz.de
-				ul.icons(style='margin-top: 5px')
-					li
-						a.icon.brands.fa-facebook-f(target='_blank', rel='noopener noreferrer', href='https://www.facebook.com/Wassersport-Gr%C3%B6mitz-192188167481660/')
+			section.panel.spotlight.small.left.color2.butzen.terrassenbutze-modal(style='width: 18rem')
+				.content
+					h2.major #Terrassenbutze
+					h3.on-hover Details hier!
+				.image.filtered.tinted.hover(data-position='center')
+					+picture("/assets/images","butzen/terassenbutze/1",['jpg'], alt="")
+			section.panel.spotlight.small.left.color2.butzen.meerblickbutze-modal(style='width: 18rem')
+				.content
+					h2.major Meer.Blick.Butze
+					h3.on-hover Under Construction!
+				.image.filtered.tinted.hover(data-position='center')
+					+picture("/assets/images","renovieren",['jpg'], alt="")
+			//
+				<section class="panel banner left color2" id="butze">
+				<div class="intro color2">
+				<h1 class="major">Die Butze</h1>
+				</div>
+				<div class="inner columns aligned">
+				<div class="span-2-25" style="z-index: 100">
+				<h3 class="major">BOSS Size</h3>
+				<span>Nicht viel sabbeln...Details in a nutshell:</span>
+				<ul class="altOFF">
+				<li>2 ZKB I 40qm I 4 Piraten (m/w/d)</li>
+				<li>Rainforest Duschkabine mit Fön</li>
+				</ul>
+				<h3 class="major">VALUE for Money</h3>
+				<span>All Inclusive Butzen</span>
+				<ul class="altOFF">
+				<li style="line-height: 20px">
+				Doppelbett 140*200 <br />
+				<span style="font-size: 0.85em"
+				>(Bitte vergesst Eure Schnuffelbettwäsche nicht!)</span
+				>
+				</li>
+				<li>Schlafcouch</li>
+				<li>Flat TV</li>
+				<li>Playstation 1</li>
+				<li>Marshall Bluetooth Boom Box</li>
+				</ul>
+				</div>
+				<div class="span-2-25" style="z-index: 100">
+				<h3 class="major">Kitchen Highlights</h3>
+				<ul class="altOFF">
+				<li>Herd, Ceranfeld, Spülmaschine</li>
+				<li>Russel & Hobbs Toaster & Wasserkocher</li>
+				<li>Nespresso Kaffemaschine</li>
+				</ul>
+				<br />
+				</div>
+				<div class="surfer-bg"></div>
+				</div>
+				</section>
+			// Panel
+			section#preise.panel.color4-alt
+				.inner.columns.divided
+					.span-1-5
+						h1.major Kalender
+						br
+						//
+							<div class="table-wrapper">
+							<table>
+							<tbody>
+							<tr>
+							<td>Ollie Season</td>
+							<td>(4.10.-1.11.19)</td>
+							<td>65€/N</td>
+							</tr>
+							<tr>
+							<td>Kick Flip Season</td>
+							<td>(1.11.-23.12.19)</td>
+							<td>70€/N</td>
+							</tr>
+							<tr>
+							<td>360* Flip Season</td>
+							<td>(23.12.-11.01.20)</td>
+							<td>85€/N</td>
+							</tr>
+							</tbody>
+							</table>
+							</div>
+					.span-5
+						#traumfewo-calendar-274779.tfw-calendar-app(data-base_url='www.traum-ferienwohnungen.de', data-language_id='1', data-startmonth='0', data-numberofmonths='3', data-listingid='274779')
+							a#calendar-link-274779(href='https://traum-ferienwohnungen.de/274779')
+								| Ferienwohnung Bretterbutze Strandallee auf
+								| traum-ferienwohnungen.de
+						script(src='https://static2.traum-ferienwohnungen.de/vmb-public/cache/js/calendarWidget.js', type='application/javascript')
+						script(type='application/javascript').
+							function createWidget274779() {
+							var calendarNode = document.getElementById(
+							"traumfewo-calendar-274779"
+							);
+							var calendarWidget = new window.tfw.CalendarWidget(
+							calendarNode
+							);
+							calendarWidget.throttle("resize", "optimizedResize");
+							window.addEventListener(
+							"resize",
+							function () {
+							calendarWidget.update();
+							},
+							false
+							);
+							calendarWidget.init();
+							}
+							window.addEventListener(
+							"load",
+							function (event) {
+							createWidget274779();
+							},
+							false
+							);
+							if (window.tfw && window.tfw.CalendarWidget) {
+							createWidget274779();
+							}
+			section#gallerie.panel
+				.gallery
+					.group.span-3
+						a.image.filtered.span-3(href='assets/images/butzen/strandallee/Bretterbutze-1.jpg', data-position='center')
+							+picture("/assets/images","butzen/strandallee/Bretterbutze-1",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/Bretterbutze-12.jpg', data-position='center')
+							+picture("/assets/images","butzen/strandallee/Bretterbutze-12",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/Bretterbutze-6.jpg', data-position='bottom')
+							+picture("/assets/images","butzen/strandallee/Bretterbutze-6",['jpg'], alt="")
+					a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/Bretterbutze-7.jpg', data-position='top')
+						+picture("/assets/images","butzen/strandallee/Bretterbutze-7",['jpg'], alt="")
+					.group.span-3
+						a.image.filtered.span-3(href='assets/images/butzen/strandallee/Bretterbutze-9.jpg', data-position='center')
+							+picture("/assets/images","butzen/strandallee/Bretterbutze-9",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/stock/wasser.jpg', data-position='center')
+							+picture("/assets/images","stock/wasser",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/Bretterbutze-2.jpg', data-position='bottom')
+							+picture("/assets/images","butzen/strandallee/Bretterbutze-2",['jpg'], alt="")
+					// <a href="images/butzen/strandallee/Bretterbutze-5.jpg" class="image filtered span-3" data-position="bottom"><img src="images/butzen/strandallee/Bretterbutze-5.jpg" alt="" /></a>
+					a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/Bretterbutze-10.jpg', data-position='center')
+						+picture("/assets/images","butzen/strandallee/Bretterbutze-10",['jpg'], alt="")
+					.group.span-3
+						a.image.filtered.span-3(href='assets/images/butzen/strandallee/bad3.jpg', data-position='center')
+							+picture("/assets/images","butzen/strandallee/bad3",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/tasse.jpg', data-position='center')
+							+picture("/assets/images","butzen/strandallee/tasse",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/bad1.jpg', data-position='center')
+							+picture("/assets/images","butzen/strandallee/bad1",['jpg'], alt="")
+					a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/bad2.jpg', data-position='center')
+						+picture("/assets/images","butzen/strandallee/bad2",['jpg'], alt="")
+					// <a href="images/butzen/strandallee/tasse.jpg" class="image filtered span-2-5" data-position="center"><img src="images/butzen/strandallee/tasse.jpg"alt="" /></a>
+			section#sport.panel.spotlight.large.left
+				.content.span-4-5
+					h1.major Sport
+					h3 SURF &amp; TURF
+					p
+						| In Kooperation mit unseren Freunden vom Team Wassersport Gr&ouml;mitz
+						| und dem Mann am Segel J&ouml;rg wird das Wasser Euer Element Nr. 1.
+					a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://www.wassersport-groemitz.de/station/team.html') www.wassersport-groemitz.de
+					ul.icons(style='margin-top: 5px')
+						li
+							a.icon.brands.fa-facebook-f(target='_blank', rel='noopener noreferrer', href='https://www.facebook.com/Wassersport-Gr%C3%B6mitz-192188167481660/')
+								span.label Facebook
+						li
+							a.icon.fa-envelope(target='_blank', rel='noopener noreferrer', href='mailto:info@wassersport-groemitz.de')
+								span.label Instagram
+				.image(data-position='center')
+					+picture("/assets/images","stock/surf3",['jpg'], alt="")
+			section.panel.color5.span-2-5
+				.inner
+					h2.major Events &amp; Lieblingspl&auml;tze
+					br
+					h3 Langweile bleibt zu Hause
+					span
+						| Picke packe voll! Findet Eure lieblings Events in und rund um
+						| Gr&ouml;mitz. 
+						br
+						a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://www.groemitz.de/veranstaltungen') https://www.groemitz.de/veranstaltungen
+						a.icon.brands.fa-facebook-f(target='_blank', rel='noopener noreferrer', style='margin-left: 10px', href='https://www.facebook.com/groemitz')
 							span.label Facebook
-					li
-						a.icon.fa-envelope(target='_blank', rel='noopener noreferrer', href='mailto:info@wassersport-groemitz.de')
+						a.icon.brands.fa-instagram(target='_blank', rel='noopener noreferrer', style='margin-left: 10px', href='https://www.instagram.com/groemitz/')
 							span.label Instagram
-			.image(data-position='center')
-				+picture("/assets/images","stock/surf3",['jpg'], alt="")
-		section.panel.color5.span-2-5
-			.inner
-				h2.major Events &amp; Lieblingspl&auml;tze
-				br
-				h3 Langweile bleibt zu Hause
+					br
+					h3 Must GO
+					p
+						a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://www.groemitz.de/ostsee-lounges') Ostseelounge Gr&ouml;mitz
+						br
+						a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://www.kraxelmaxel.de/kletterpark-groemitz/') Kraxelmaxel Gr&ouml;mitz
+						br
+						a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='http://www.zoo-arche-noah.de/') Zoo Arche Noah
+						br
+						a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://www.hansapark.de') Hansa Park Sierksdorf
+						br
+						a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://www.kino-groemitz.de') Kino Gr&ouml;mitz
+						br
+						a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://www.wassersport-groemitz.de/') Wasersport Gr&ouml;mitz
+			section.panel.banner
+				.image.span-5.filtered.tinted(data-position='left')
+					// <img src="images/stock/wasser.jpg" alt="" />
+					+picture("/assets/images","butzen/strandallee/Bretterbutze-8",['jpg'], alt="")
+			section#outbox.panel.color6-alt
+				.intro.color6
+					h1.major OUT OF THE (BRETTER) BOX
+					// <p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam. </p>
+				.inner.columns.aligned
+					.span-2-5
+						h3.major Kidz
+						blockquote
+							| &quot;Zwei Dinge sollen Kinder von ihren Eltern bekommen: Wurzeln und
+							| Fl&uuml;gel.&bdquo; (Johann Wolfgang von Goethe)
+						p
+							| Eure kleinen Piraten erwartet bei uns zudem verr&uuml;cktes Geschirr,
+							| ein Hochstuhl, Baby Bett sowie Sandspielzeug.
+						h3.major LUMA &amp; Co.
+						p
+							| Eure Luftmatratze war schon vor Euch hier und den Lounger nehmt
+							| ihr bitte mit zum Beach! 
+							br
+							|                 By the way, mit der Marshall Bluetooth Box tanzen auch die
+							|                 Nachbarn. ;)
+					.span-2-5
+						h3.major Longboards &amp; Microroller
+						blockquote
+							| &ldquo;Wir sind die coolsten, wenn wir cruisen&mldr;&rdquo; (Massive T&ouml;ne)
+						p
+							| Solltet ihr doch mal lieber old school unterwegs sein bimmelt
+							| beim
+							a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://bike-segwaypoint.de/') Bike &amp; Segway Point
+							|                 in der Strandallee
+						p
+							| Eure Mini Piraten gleiten easy mit einem nagelneuen Microroller
+							| los.
+						br
+						h3.major W&auml;schepaket
+						p
+							| Bettbezug (Kissen &amp; Decke) plus Spannbettlaken, 1 Handtuch
+							strong Preis auf Anfrage
+					.span-2-5
+						h3.major Daddelei
+						p
+							| Schietwedder gibt es nicht, es gibt nur&mldr; ihr wisst schon! 
+							br
+							|                 Sollte es doch mal regnen, oder schneien keine Bange, ihr seid
+							|                 nicht in der Schweiz. ;-) Wir haben dennoch eine Idee wie ihr
+							|                 Euch die Zeit vertreiben k&ouml;nnt.
+						h4 Nerdy? M&ouml;glich, aber kult!
+						p
+							| Mensch &auml;rger dich nicht; Stadt, Land, Fluss; Uno, Jenga uvm.
+						h4 Bissl Oldschool.., aber nice!
+						p
+							| F&uuml;r die Millennials unter uns ne Runde auf der Playstation 1.
+							| Tony Hawk oder Cool Boarder m&uuml;sst ihr allerdings selbst
+							| entscheiden.
+			section.panel.banner.left
+				.image.span-2.filtered.tinted(data-position='left')
+					+picture("/assets/images","butzen/strandallee/Bretterbutze-12",['jpg'], alt="")
+			section#kontakt.panel.color4-alt
+				.intro.color4
+					h2.major Kontakt
+					p
+						strong Bretterbutze Gr&ouml;mitz&reg;
+						br
+						|               Strandallee 3C 
+						br
+						|               23743 Gr&ouml;mitz 
+						br
+						|               Germany
+				.inner.columns.divided
+					.span-3-25
+						form#contact-form(accept-charset='UTF-8', action='mail.php', method='POST')
+							.fields
+								.field.half
+									label(for='name') Name
+									input#name(type='text', name='name')
+								.field.half
+									label(for='email') Email
+									input#email(type='email', name='email')
+								.field
+									label(for='message') Nachricht
+									textarea#message(name='message', rows='4')
+							.g-recaptcha(data-sitekey='6Lee6bYUAAAAADPEI0M8y-ilOv7SR1IBVmtsQBii', style='padding: 0px 0 15px 0')
+							ul.actions
+								li
+									input.button.primary(type='submit', value='Nachricht senden')
+							.msg-box
+					.span-2-0
+						ul.contact-icons.color4
+							li.icon.brands.fa-facebook-f
+								a(target='_blank', rel='noopener noreferrer', href='https://www.facebook.com/Bretterbutze-Strandallee-Gr%C3%B6mitz-107574547291216/') @facebook
+							li.icon.brands.fa-instagram
+								a(target='_blank', rel='noopener noreferrer', href='https://www.instagram.com/bretterbutze_groemitz/') @instagram
+							li.icon.brands.fa-fort-awesome
+								a(target='_blank', rel='noopener noreferrer', href='https://www.traum-ferienwohnungen.de/274779/') @traum-fewo
+							li.icon.brands.fa-airbnb
+								a(target='_blank', rel='noopener noreferrer', href='https://www.airbnb.de/rooms/37320091?s=67&shared_item_type=1&virality_entry_point=1&sharer_id=282151517') @airbnb
+							li.icon.fa-envelope
+								a(target='_blank', rel='noopener noreferrer', href='mailto:info@bretterbutze-groemitz.de') info@bretterbutze-groemitz.de
+			// Copyright
+			.copyright Bretterbutze Gr&ouml;mitz&reg; |&nbsp;Gr&ouml;mitz 2021
+			.footer
+				span Bretterbutze Gr&ouml;mitz&reg;
+				|  | 
+				span Gr&ouml;mitz 2021
+				|  |
 				span
-					| Picke packe voll! Findet Eure lieblings Events in und rund um
-					| Gr&ouml;mitz. 
-					br
-					a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://www.groemitz.de/veranstaltungen') https://www.groemitz.de/veranstaltungen
-					a.icon.brands.fa-facebook-f(target='_blank', rel='noopener noreferrer', style='margin-left: 10px', href='https://www.facebook.com/groemitz')
-						span.label Facebook
-					a.icon.brands.fa-instagram(target='_blank', rel='noopener noreferrer', style='margin-left: 10px', href='https://www.instagram.com/groemitz/')
-						span.label Instagram
-				br
-				h3 Must GO
-				p
-					a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://www.groemitz.de/ostsee-lounges') Ostseelounge Gr&ouml;mitz
-					br
-					a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://www.kraxelmaxel.de/kletterpark-groemitz/') Kraxelmaxel Gr&ouml;mitz
-					br
-					a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='http://www.zoo-arche-noah.de/') Zoo Arche Noah
-					br
-					a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://www.hansapark.de') Hansa Park Sierksdorf
-					br
-					a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://www.kino-groemitz.de') Kino Gr&ouml;mitz
-					br
-					a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://www.wassersport-groemitz.de/') Wasersport Gr&ouml;mitz
-		section.panel.banner
-			.image.span-5.filtered.tinted(data-position='left')
-				// <img src="images/stock/wasser.jpg" alt="" />
-				+picture("/assets/images","butzen/strandallee/Bretterbutze-8",['jpg'], alt="")
-		section#outbox.panel.color6-alt
-			.intro.color6
-				h1.major OUT OF THE (BRETTER) BOX
-				// <p>Sed vel nibh libero. Mauris et lorem pharetra massa lorem turpis congue pulvinar. Vivamus sed feugiat finibus. Duis amet bibendum amet sed. Duis mauris ex, dapibus sed ligula tempus volutpat magna etiam. </p>
-			.inner.columns.aligned
-				.span-2-5
-					h3.major Kidz
-					blockquote
-						| &quot;Zwei Dinge sollen Kinder von ihren Eltern bekommen: Wurzeln und
-						| Fl&uuml;gel.&bdquo; (Johann Wolfgang von Goethe)
-					p
-						| Eure kleinen Piraten erwartet bei uns zudem verr&uuml;cktes Geschirr,
-						| ein Hochstuhl, Baby Bett sowie Sandspielzeug.
-					h3.major LUMA &amp; Co.
-					p
-						| Eure Luftmatratze war schon vor Euch hier und den Lounger nehmt
-						| ihr bitte mit zum Beach! 
-						br
-						|                 By the way, mit der Marshall Bluetooth Box tanzen auch die
-						|                 Nachbarn. ;)
-				.span-2-5
-					h3.major Longboards &amp; Microroller
-					blockquote
-						| &ldquo;Wir sind die coolsten, wenn wir cruisen&mldr;&rdquo; (Massive T&ouml;ne)
-					p
-						| Solltet ihr doch mal lieber old school unterwegs sein bimmelt
-						| beim
-						a(target='_blank', rel='noopener noreferrer', style='width: max-content', href='https://bike-segwaypoint.de/') Bike &amp; Segway Point
-						|                 in der Strandallee
-					p
-						| Eure Mini Piraten gleiten easy mit einem nagelneuen Microroller
-						| los.
-					br
-					h3.major W&auml;schepaket
-					p
-						| Bettbezug (Kissen &amp; Decke) plus Spannbettlaken, 1 Handtuch
-						strong Preis auf Anfrage
-				.span-2-5
-					h3.major Daddelei
-					p
-						| Schietwedder gibt es nicht, es gibt nur&mldr; ihr wisst schon! 
-						br
-						|                 Sollte es doch mal regnen, oder schneien keine Bange, ihr seid
-						|                 nicht in der Schweiz. ;-) Wir haben dennoch eine Idee wie ihr
-						|                 Euch die Zeit vertreiben k&ouml;nnt.
-					h4 Nerdy? M&ouml;glich, aber kult!
-					p
-						| Mensch &auml;rger dich nicht; Stadt, Land, Fluss; Uno, Jenga uvm.
-					h4 Bissl Oldschool.., aber nice!
-					p
-						| F&uuml;r die Millennials unter uns ne Runde auf der Playstation 1.
-						| Tony Hawk oder Cool Boarder m&uuml;sst ihr allerdings selbst
-						| entscheiden.
-		section.panel.banner.left
-			.image.span-2.filtered.tinted(data-position='left')
-				+picture("/assets/images","butzen/strandallee/Bretterbutze-12",['jpg'], alt="")
-		section#kontakt.panel.color4-alt
-			.intro.color4
-				h2.major Kontakt
-				p
-					strong Bretterbutze Gr&ouml;mitz&reg;
-					br
-					|               Strandallee 3C 
-					br
-					|               23743 Gr&ouml;mitz 
-					br
-					|               Germany
-			.inner.columns.divided
-				.span-3-25
-					form#contact-form(accept-charset='UTF-8', action='mail.php', method='POST')
-						.fields
-							.field.half
-								label(for='name') Name
-								input#name(type='text', name='name')
-							.field.half
-								label(for='email') Email
-								input#email(type='email', name='email')
-							.field
-								label(for='message') Nachricht
-								textarea#message(name='message', rows='4')
-						.g-recaptcha(data-sitekey='6Lee6bYUAAAAADPEI0M8y-ilOv7SR1IBVmtsQBii', style='padding: 0px 0 15px 0')
-						ul.actions
-							li
-								input.button.primary(type='submit', value='Nachricht senden')
-						.msg-box
-				.span-2-0
-					ul.contact-icons.color4
-						li.icon.brands.fa-facebook-f
-							a(target='_blank', rel='noopener noreferrer', href='https://www.facebook.com/Bretterbutze-Strandallee-Gr%C3%B6mitz-107574547291216/') @facebook
-						li.icon.brands.fa-instagram
-							a(target='_blank', rel='noopener noreferrer', href='https://www.instagram.com/bretterbutze_groemitz/') @instagram
-						li.icon.brands.fa-fort-awesome
-							a(target='_blank', rel='noopener noreferrer', href='https://www.traum-ferienwohnungen.de/274779/') @traum-fewo
-						li.icon.brands.fa-airbnb
-							a(target='_blank', rel='noopener noreferrer', href='https://www.airbnb.de/rooms/37320091?s=67&shared_item_type=1&virality_entry_point=1&sharer_id=282151517') @airbnb
-						li.icon.fa-envelope
-							a(target='_blank', rel='noopener noreferrer', href='mailto:info@bretterbutze-groemitz.de') info@bretterbutze-groemitz.de
-		// Copyright
-		.copyright Bretterbutze Gr&ouml;mitz&reg; |&nbsp;Gr&ouml;mitz 2021
-		.footer
-			span Bretterbutze Gr&ouml;mitz&reg;
-			|  | 
-			span Gr&ouml;mitz 2021
-			|  |
-			span
-				a.impressum-trigger(style='width: max-content', href='#') Impressum
-			|           |
-			span
-				a.datenschutz-trigger(style='width: max-content', href='#') Datenschutz
-			.modal.impressum(tabindex='-1')
-				.inner
-					section.panel.color4-alt
-						.inner.columns.divided
-							.content.span-1-5
-								h2.major Impressum
-							.content.span-2-75
-								div
-									| Angaben gem&auml;&szlig; &sect; 5 TMG: 
-									br
-									br
-									|                       Florian Muehe 
-									br
-									|                       Hauptstra&szlig;e 1d 
-									br
-									|                       37671 H&ouml;xter 
-									br
-									br
-									h3 Kontakt:
-									|                       Telefon: 0162/2520094 
-									br
-									|                       E-Mail: info@bretterbutze-groemitz.de
-			.modal.datenschutz(tabindex='-1')
-				.inner
-					section.panel.color4-alt
-						.inner.columns.divided
-							.content.span-1-5
-								h2.major
-									| Datenschutz &amp;
-									br
-									|                       Haftungsausschluss
-							.content.span-2-75(style='height: 100%')
-								h3 Haftung f&uuml;r Inhalte
-								p
-									| Die Inhalte unserer Seiten wurden mit gr&ouml;&szlig;ter Sorgfalt
-									| erstellt. F&uuml;r die Richtigkeit, Vollst&auml;ndigkeit und
-									| Aktualit&auml;t der Inhalte k&ouml;nnen wir jedoch keine Gew&auml;hr
-									| &uuml;bernehmen. Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs.1
-									| TMG f&uuml;r eigene Inhalte auf diesen Seiten nach den
-									| allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG
-									| sind wir als Diensteanbieter jedoch nicht verpflichtet,
-									| &uuml;bermittelte oder gespeicherte fremde Informationen zu
-									| &uuml;berwachen oder nach Umst&auml;nden zu forschen, die auf eine
-									| rechtswidrige T&auml;tigkeit hinweisen. Verpflichtungen zur
-									| Entfernung oder Sperrung der Nutzung von Informationen
-									| nach den allgemeinen Gesetzen bleiben hiervon unber&uuml;hrt.
-									| Eine diesbez&uuml;gliche Haftung ist jedoch erst ab dem
-									| Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung
-									| m&ouml;glich. Bei Bekanntwerden von entsprechenden
-									| Rechtsverletzungen werden wir diese Inhalte umgehend
-									| entfernen.
-								h3 Haftung f&uuml;r Links
-								p
-									| Unser Angebot enth&auml;lt Links zu externen Webseiten Dritter,
-									| auf deren Inhalte wir keinen Einfluss haben. Deshalb
-									| k&ouml;nnen wir f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr
-									| &uuml;bernehmen. F&uuml;r die Inhalte der verlinkten Seiten ist
-									| stets der jeweilige Anbieter oder Betreiber der Seiten
-									| verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt
-									| der Verlinkung auf m&ouml;gliche Rechtsverst&ouml;&szlig;e &uuml;berpr&uuml;ft.
-									| Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung
-									| nicht erkennbar. Eine permanente inhaltliche Kontrolle der
-									| verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte
-									| einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden
-									| von Rechtsverletzungen werden wir derartige Links umgehend
-									| entfernen.
-								h3 Urheberrecht
-								p
-									| Die durch die Seitenbetreiber erstellten Inhalte und Werke
-									| auf diesen Seiten unterliegen dem deutschen Urheberrecht.
-									| Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede
-									| Art der Verwertung au&szlig;erhalb der Grenzen des
-									| Urheberrechtes bed&uuml;rfen der schriftlichen Zustimmung des
-									| jeweiligen Autors bzw. Erstellers. Downloads und Kopien
-									| dieser Seite sind nur f&uuml;r den privaten, nicht
-									| kommerziellen Gebrauch gestattet. Soweit die Inhalte auf
-									| dieser Seite nicht vom Betreiber erstellt wurden, werden
-									| die Urheberrechte Dritter beachtet. Insbesondere werden
-									| Inhalte Dritter als solche gekennzeichnet. Sollten Sie
-									| trotzdem auf eine Urheberrechtsverletzung aufmerksam
-									| werden, bitten wir um einen entsprechenden Hinweis. Bei
-									| Bekanntwerden von Rechtsverletzungen werden wir derartige
-									| Inhalte umgehend entfernen.
-								h3 Datenschutz
-								p
-									| Die Nutzung unserer Webseite ist in der Regel ohne Angabe
-									| personenbezogener Daten m&ouml;glich. Soweit auf unseren Seiten
-									| personenbezogene Daten (beispielsweise Name, Anschrift
-									| oder eMail-Adressen) erhoben werden, erfolgt dies, soweit
-									| m&ouml;glich, stets auf freiwilliger Basis. Diese Daten werden
-									| ohne Ihre ausdr&uuml;ckliche Zustimmung nicht an Dritte
-									| weitergegeben.
-								p
-									| Wir weisen darauf hin, dass die Daten&uuml;bertragung im
-									| Internet (z.B. bei der Kommunikation per E-Mail)
-									| Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser Schutz
-									| der Daten vor dem Zugriff durch Dritte ist nicht m&ouml;glich.
-								p
-									| Der Nutzung von im Rahmen der Impressumspflicht
-									| ver&ouml;ffentlichten Kontaktdaten durch Dritte zur &Uuml;bersendung
-									| von nicht ausdr&uuml;cklich angeforderter Werbung und
-									| Informationsmaterialien wird hiermit ausdr&uuml;cklich
-									| widersprochen. Die Betreiber der Seiten behalten sich
-									| ausdr&uuml;cklich rechtliche Schritte im Falle der unverlangten
-									| Zusendung von Werbeinformationen, etwa durch Spam-Mails,
-									| vor.
-.cookie-notice.color2(style='display: none')
-	p
-		| Um unsere Webseite f&uuml;r Sie optimal zu gestalten und fortlaufend
-		| verbessern zu k&ouml;nnen, verwenden wir Cookies. Durch die weitere Nutzung
-		| der Webseite stimmen Sie der Verwendung von Cookies zu. N&auml;here
-		| Informationen finden Sie in unserer
-		a.datenschutz-trigger(href='#') Datenschutzerkl&auml;rung
-	a.agree.button.primary.color4(href='#') Akzeptieren
-.modal.strandallee.large(tabindex='-1')
-	.inner
-		section#strandallee.panel.banner.left.color2
-			.intro.color2
-				+picture("/assets/images","logo_strandallee",['png'], alt="Logo Strandallee", "butzen-logo")
-				//- img.butzen-logo(src='images/logo_strandallee.png', alt='Logo Strandallee')
-				strong(style='margin: 0 auto') Bretterbutze Gr&ouml;mitz&reg;
-				//
-					<h3 class="">Eure Butze</h3>
-					<h1 class="major">Strandallee</h1>
-				//
-					<br />
-					<h3>Was geht Strandallee?</h3>
-				//
-					<p style="text-align: center">
-					Eure
-					<strong style="text-align: center">POLE POSITION</strong>
-					im Bretterbutzen TRIO. Als erstes am Start und somit quasi Kult
-					liegt die Strandallee auch geographisch nur 50 Metern entfernt,
-					ganz weit vorn am Meer!
-					</p>
-			.inner.columns.aligned
-				.span-2-25(style='z-index: 100')
-					strong(style='margin-bottom: 20px; display: block') Nicht viel sabbeln...Details in der Fischbu&#x308;chse:
-					h3.major BOSS Size
-					ul.altOFF.anchor-list
-						li 2 ZKB | 40qm Butze
-						li 4 Piraten (m/w/d)
-						li Nasszelle mit Rainforest Dusche + F&ouml;n
-					h3.major Butzen Inclusive
-					ul.altOFF.anchor-list
-						li 140*200 Bett
-						li Schlafcouch im Wohnzimmer/ Babybett
-						li Microroller, PS1, Skateboard, Marshall Bluetooth
-					h3.major Pu&#x308;tt &amp; Pann
-					ul.altOFF.anchor-list.anchor-list
-						li
-							| Ofen, Ceranfeld &amp; Spu&#x308;lmaschine, Retro Ku&#x308;hlschrank Gefrierfach
-						li Toaster &amp; Wasserkocher
-						li Nespresso Kapselmaschine &amp; Kaffeefiler
-					br
-				.span-2-25(style='z-index: 100')
-					.image.filtered.tinted
-						+picture("/assets/images","butzen/strandallee/Bretterbutze-1",['jpg'], alt="")
-					.image.filtered.tinted
-						+picture("/assets/images","butzen/strandallee/Bretterbutze-2",['jpg'], alt="")
-					.image.filtered.tinted
-						+picture("/assets/images","butzen/strandallee/Bretterbutze-3",['jpg'], alt="")
-					br
-					br
-				.surfer-bg
-.modal.terrassenbutze.large(tabindex='-1')
-	.inner
-		section#terrassenbutze.panel.banner.left.color2
-			.intro.color2
-				+picture("/assets/images","logo_terrassenbutze",['png'], alt="", classname="butzen-logo")
-				strong(style='margin: 0 auto') Bretterbutze Gr&ouml;mitz&reg;
-				//
-					<h3 class="">Eure Butze</h3>
-					<h1 class="major">#Terrassenbutze</h1>
-					<br />
-					<h3>Was geht #Terrassenbutze?</h3>
-					<p>
-					Après Beach? Unbedingt auf der großen Sonnenterrasse im Bambus
-					Liegestuhl, auch zu später Stunde! Vom kleinen Berg seit ihr in
-					maximal 10 Minuten querfeldein am Strand.
-					</p>
-			.inner.columns.aligned
-				.span-2-25(style='z-index: 100')
-					strong(style='margin-bottom: 20px; display: block') Nicht viel sabbeln...Details in der Fischbu&#x308;chse:
-					h3.major Hoch sollst Du leben!
-					ul.altOFF.anchor-list
-						li 1ZKB I 35qm Butze plus 20qmo Sonnenterrasse
-						li 2-4 Piraten (m/w/d)
-						li Duschkabine mit Waschmaschine, Trockner &amp; F&ouml;n
-					h3.major Butzen Inclusive
-					ul.altOFF.anchor-list
-						li 140*200 Bett
-						li Schlafcouch im Wohnzimmer
-						li
-							| Sony Flat TV, 2 Penny Boards, Retro PS1, Bose Bluetooth Box
-					h3.major Pu&#x308;tt &amp; Pann
-					ul.altOFF.anchor-list
-						li Ofen, Ceranfeld &amp; Spu&#x308;lmaschine, Landmann
-						li Toaster &amp; Wasserkocher
-						li Nespresso Kapselmaschine &amp; Kaffeefiler
-					br
-				.span-2-25(style='z-index: 100')
-					.image.filtered.tinted
-						+picture("/assets/images","butzen/strandallee/Bretterbutze-1",['jpg'], alt="")
-					.image.filtered.tinted
-						+picture("/assets/images","butzen/strandallee/Bretterbutze-2",['jpg'], alt="")
-					.image.filtered.tinted
-						+picture("/assets/images","butzen/strandallee/Bretterbutze-3",['jpg'], alt="")
-					br
-					br
-				.surfer-bg
-.modal.meerblickbutze.large(tabindex='-1')
-	.inner
-		section#meerblickbutze.panel.banner.left.color2
-			.intro.color2
-				+picture("/assets/images","logo_meerblickbutze",['png'], alt="", classname="butzen-logo")
-				strong(style='margin: 0 auto') Bretterbutze Gr&ouml;mitz&reg;
-				//
-					<h3 class="">Eure Butze</h3>
-					<h1 class="major">Meer.Blick.Butze</h1>
-					<br />
-					<h3>Was geht Meer.Blick.Butze?</h3>
-					<p>
-					<strong>Der Hattrick und</strong> das kleine Geschwisterchen der
-					Bretterbutze Strandallee. Ideal für 2 Halunken, ganz weit vorn und
-					somit mit
-					<strong>Meer.Blick.</strong>
-					</p>
-			.inner.columns.aligned
-				.span-2-25(style='z-index: 100')
-					h3.major High Life
-					strong(style='margin-bottom: 10px; display: block') Nicht viel sabbeln...Details in der Fischbu&#x308;chse:
-					ul.altOFF.anchor-list
-						li 1ZKB I 25qm Wohnfl&auml;che I 2 Piraten (m/w/d)
-						li Duschkabine
-					h3.major Die inneren Werte
-					strong(style='margin-bottom: 10px; display: block') Alles Inklusive
+					a.impressum-trigger(style='width: max-content', href='#') Impressum
+				|           |
+				span
+					a.datenschutz-trigger(style='width: max-content', href='#') Datenschutz
+				.modal.impressum(tabindex='-1')
+					.inner
+						section.panel.color4-alt
+							.inner.columns.divided
+								.content.span-1-5
+									h2.major Impressum
+								.content.span-2-75
+									div
+										| Angaben gem&auml;&szlig; &sect; 5 TMG: 
+										br
+										br
+										|                       Florian Muehe 
+										br
+										|                       Hauptstra&szlig;e 1d 
+										br
+										|                       37671 H&ouml;xter 
+										br
+										br
+										h3 Kontakt:
+										|                       Telefon: 0162/2520094 
+										br
+										|                       E-Mail: info@bretterbutze-groemitz.de
+				.modal.datenschutz(tabindex='-1')
+					.inner
+						section.panel.color4-alt
+							.inner.columns.divided
+								.content.span-1-5
+									h2.major
+										| Datenschutz &amp;
+										br
+										|                       Haftungsausschluss
+								.content.span-2-75(style='height: 100%')
+									h3 Haftung f&uuml;r Inhalte
+									p
+										| Die Inhalte unserer Seiten wurden mit gr&ouml;&szlig;ter Sorgfalt
+										| erstellt. F&uuml;r die Richtigkeit, Vollst&auml;ndigkeit und
+										| Aktualit&auml;t der Inhalte k&ouml;nnen wir jedoch keine Gew&auml;hr
+										| &uuml;bernehmen. Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs.1
+										| TMG f&uuml;r eigene Inhalte auf diesen Seiten nach den
+										| allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG
+										| sind wir als Diensteanbieter jedoch nicht verpflichtet,
+										| &uuml;bermittelte oder gespeicherte fremde Informationen zu
+										| &uuml;berwachen oder nach Umst&auml;nden zu forschen, die auf eine
+										| rechtswidrige T&auml;tigkeit hinweisen. Verpflichtungen zur
+										| Entfernung oder Sperrung der Nutzung von Informationen
+										| nach den allgemeinen Gesetzen bleiben hiervon unber&uuml;hrt.
+										| Eine diesbez&uuml;gliche Haftung ist jedoch erst ab dem
+										| Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung
+										| m&ouml;glich. Bei Bekanntwerden von entsprechenden
+										| Rechtsverletzungen werden wir diese Inhalte umgehend
+										| entfernen.
+									h3 Haftung f&uuml;r Links
+									p
+										| Unser Angebot enth&auml;lt Links zu externen Webseiten Dritter,
+										| auf deren Inhalte wir keinen Einfluss haben. Deshalb
+										| k&ouml;nnen wir f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr
+										| &uuml;bernehmen. F&uuml;r die Inhalte der verlinkten Seiten ist
+										| stets der jeweilige Anbieter oder Betreiber der Seiten
+										| verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt
+										| der Verlinkung auf m&ouml;gliche Rechtsverst&ouml;&szlig;e &uuml;berpr&uuml;ft.
+										| Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung
+										| nicht erkennbar. Eine permanente inhaltliche Kontrolle der
+										| verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte
+										| einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden
+										| von Rechtsverletzungen werden wir derartige Links umgehend
+										| entfernen.
+									h3 Urheberrecht
+									p
+										| Die durch die Seitenbetreiber erstellten Inhalte und Werke
+										| auf diesen Seiten unterliegen dem deutschen Urheberrecht.
+										| Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede
+										| Art der Verwertung au&szlig;erhalb der Grenzen des
+										| Urheberrechtes bed&uuml;rfen der schriftlichen Zustimmung des
+										| jeweiligen Autors bzw. Erstellers. Downloads und Kopien
+										| dieser Seite sind nur f&uuml;r den privaten, nicht
+										| kommerziellen Gebrauch gestattet. Soweit die Inhalte auf
+										| dieser Seite nicht vom Betreiber erstellt wurden, werden
+										| die Urheberrechte Dritter beachtet. Insbesondere werden
+										| Inhalte Dritter als solche gekennzeichnet. Sollten Sie
+										| trotzdem auf eine Urheberrechtsverletzung aufmerksam
+										| werden, bitten wir um einen entsprechenden Hinweis. Bei
+										| Bekanntwerden von Rechtsverletzungen werden wir derartige
+										| Inhalte umgehend entfernen.
+									h3 Datenschutz
+									p
+										| Die Nutzung unserer Webseite ist in der Regel ohne Angabe
+										| personenbezogener Daten m&ouml;glich. Soweit auf unseren Seiten
+										| personenbezogene Daten (beispielsweise Name, Anschrift
+										| oder eMail-Adressen) erhoben werden, erfolgt dies, soweit
+										| m&ouml;glich, stets auf freiwilliger Basis. Diese Daten werden
+										| ohne Ihre ausdr&uuml;ckliche Zustimmung nicht an Dritte
+										| weitergegeben.
+									p
+										| Wir weisen darauf hin, dass die Daten&uuml;bertragung im
+										| Internet (z.B. bei der Kommunikation per E-Mail)
+										| Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser Schutz
+										| der Daten vor dem Zugriff durch Dritte ist nicht m&ouml;glich.
+									p
+										| Der Nutzung von im Rahmen der Impressumspflicht
+										| ver&ouml;ffentlichten Kontaktdaten durch Dritte zur &Uuml;bersendung
+										| von nicht ausdr&uuml;cklich angeforderter Werbung und
+										| Informationsmaterialien wird hiermit ausdr&uuml;cklich
+										| widersprochen. Die Betreiber der Seiten behalten sich
+										| ausdr&uuml;cklich rechtliche Schritte im Falle der unverlangten
+										| Zusendung von Werbeinformationen, etwa durch Spam-Mails,
+										| vor.
+	.cookie-notice.color2(style='display: none')
+		p
+			| Um unsere Webseite f&uuml;r Sie optimal zu gestalten und fortlaufend
+			| verbessern zu k&ouml;nnen, verwenden wir Cookies. Durch die weitere Nutzung
+			| der Webseite stimmen Sie der Verwendung von Cookies zu. N&auml;here
+			| Informationen finden Sie in unserer
+			a.datenschutz-trigger(href='#') Datenschutzerkl&auml;rung
+		a.agree.button.primary.color4(href='#') Akzeptieren
+	.modal.strandallee.large(tabindex='-1')
+		.inner
+			section#strandallee.panel.banner.left.color2
+				.intro.color2
+					+picture("/assets/images","logo_strandallee",['png'], alt="Logo Strandallee", "butzen-logo")
+					//- img.butzen-logo(src='images/logo_strandallee.png', alt='Logo Strandallee')
+					strong(style='margin: 0 auto') Bretterbutze Gr&ouml;mitz&reg;
 					//
-						<ul class="altOFF anchor-list">
-						<li>
-						SMART: Hochbett 140*200cm mit integriertem Kleiderschrank
-						</li>
-						<li>Schlafcouch 140*200cm</li>
-						<li>Sony Flat TV</li>
-						<li>Retro Playstation</li>
-						<li>Bose Bluetooth Box</li>
-						<li>Landmann Kugelgrill</li>
-						<li>2 chilly Billy Liegestühle + Astra Tisch</li>
-						<li>2 Penny Boards</li>
-						<li>
-						<strong>Zusatzleistungen:</strong> Wäschepaket (Bettbezug
-						(Kissen & Decke) plus Spannbettlaken, 1 Handtuch) Preis auf
-						Anfrage
-						</li>
-						</ul>
-				.span-2-25(style='z-index: 100')
-					h3.major Pu&#x308;tt &amp; Pann
-					ul.altOFF.anchor-list
-						li Herd, Ceranfeld, Spu&#x308;lmaschine
-						li Ku&#x308;hlschrank mit Gefrierfach
-						li Wasserkocher
-						li Nespresso Kapselmaschine
-						li Old but Gold Keramik Kaffeefilter
-					br
-				.surfer-bg
-// Scripts
-script(src='assets/js/jquery.min.js')
-script(src='assets/js/browser.min.js')
-script(src='assets/js/breakpoints.min.js')
-script(src='assets/js/js.cookie.js')
-script(src='assets/js/main.js')
+						<h3 class="">Eure Butze</h3>
+						<h1 class="major">Strandallee</h1>
+					//
+						<br />
+						<h3>Was geht Strandallee?</h3>
+					//
+						<p style="text-align: center">
+						Eure
+						<strong style="text-align: center">POLE POSITION</strong>
+						im Bretterbutzen TRIO. Als erstes am Start und somit quasi Kult
+						liegt die Strandallee auch geographisch nur 50 Metern entfernt,
+						ganz weit vorn am Meer!
+						</p>
+				.inner.columns.aligned
+					.span-2-25(style='z-index: 100')
+						strong(style='margin-bottom: 20px; display: block') Nicht viel sabbeln...Details in der Fischbu&#x308;chse:
+						h3.major BOSS Size
+						ul.altOFF.anchor-list
+							li 2 ZKB | 40qm Butze
+							li 4 Piraten (m/w/d)
+							li Nasszelle mit Rainforest Dusche + F&ouml;n
+						h3.major Butzen Inclusive
+						ul.altOFF.anchor-list
+							li 140*200 Bett
+							li Schlafcouch im Wohnzimmer/ Babybett
+							li Microroller, PS1, Skateboard, Marshall Bluetooth
+						h3.major Pu&#x308;tt &amp; Pann
+						ul.altOFF.anchor-list.anchor-list
+							li
+								| Ofen, Ceranfeld &amp; Spu&#x308;lmaschine, Retro Ku&#x308;hlschrank Gefrierfach
+							li Toaster &amp; Wasserkocher
+							li Nespresso Kapselmaschine &amp; Kaffeefiler
+						br
+					.span-2-25(style='z-index: 100')
+						.image.filtered.tinted
+							+picture("/assets/images","butzen/strandallee/Bretterbutze-1",['jpg'], alt="")
+						.image.filtered.tinted
+							+picture("/assets/images","butzen/strandallee/Bretterbutze-2",['jpg'], alt="")
+						.image.filtered.tinted
+							+picture("/assets/images","butzen/strandallee/Bretterbutze-3",['jpg'], alt="")
+						br
+						br
+					.surfer-bg
+	.modal.terrassenbutze.large(tabindex='-1')
+		.inner
+			section#terrassenbutze.panel.banner.left.color2
+				.intro.color2
+					+picture("/assets/images","logo_terrassenbutze",['png'], alt="", classname="butzen-logo")
+					strong(style='margin: 0 auto') Bretterbutze Gr&ouml;mitz&reg;
+					//
+						<h3 class="">Eure Butze</h3>
+						<h1 class="major">#Terrassenbutze</h1>
+						<br />
+						<h3>Was geht #Terrassenbutze?</h3>
+						<p>
+						Après Beach? Unbedingt auf der großen Sonnenterrasse im Bambus
+						Liegestuhl, auch zu später Stunde! Vom kleinen Berg seit ihr in
+						maximal 10 Minuten querfeldein am Strand.
+						</p>
+				.inner.columns.aligned
+					.span-2-25(style='z-index: 100')
+						strong(style='margin-bottom: 20px; display: block') Nicht viel sabbeln...Details in der Fischbu&#x308;chse:
+						h3.major Hoch sollst Du leben!
+						ul.altOFF.anchor-list
+							li 1ZKB I 35qm Butze plus 20qmo Sonnenterrasse
+							li 2-4 Piraten (m/w/d)
+							li Duschkabine mit Waschmaschine, Trockner &amp; F&ouml;n
+						h3.major Butzen Inclusive
+						ul.altOFF.anchor-list
+							li 140*200 Bett
+							li Schlafcouch im Wohnzimmer
+							li
+								| Sony Flat TV, 2 Penny Boards, Retro PS1, Bose Bluetooth Box
+						h3.major Pu&#x308;tt &amp; Pann
+						ul.altOFF.anchor-list
+							li Ofen, Ceranfeld &amp; Spu&#x308;lmaschine, Landmann
+							li Toaster &amp; Wasserkocher
+							li Nespresso Kapselmaschine &amp; Kaffeefiler
+						br
+					.span-2-25(style='z-index: 100')
+						.image.filtered.tinted
+							+picture("/assets/images","butzen/strandallee/Bretterbutze-1",['jpg'], alt="")
+						.image.filtered.tinted
+							+picture("/assets/images","butzen/strandallee/Bretterbutze-2",['jpg'], alt="")
+						.image.filtered.tinted
+							+picture("/assets/images","butzen/strandallee/Bretterbutze-3",['jpg'], alt="")
+						br
+						br
+					.surfer-bg
+	.modal.meerblickbutze.large(tabindex='-1')
+		.inner
+			section#meerblickbutze.panel.banner.left.color2
+				.intro.color2
+					+picture("/assets/images","logo_meerblickbutze",['png'], alt="", classname="butzen-logo")
+					strong(style='margin: 0 auto') Bretterbutze Gr&ouml;mitz&reg;
+					//
+						<h3 class="">Eure Butze</h3>
+						<h1 class="major">Meer.Blick.Butze</h1>
+						<br />
+						<h3>Was geht Meer.Blick.Butze?</h3>
+						<p>
+						<strong>Der Hattrick und</strong> das kleine Geschwisterchen der
+						Bretterbutze Strandallee. Ideal für 2 Halunken, ganz weit vorn und
+						somit mit
+						<strong>Meer.Blick.</strong>
+						</p>
+				.inner.columns.aligned
+					.span-2-25(style='z-index: 100')
+						h3.major High Life
+						strong(style='margin-bottom: 10px; display: block') Nicht viel sabbeln...Details in der Fischbu&#x308;chse:
+						ul.altOFF.anchor-list
+							li 1ZKB I 25qm Wohnfl&auml;che I 2 Piraten (m/w/d)
+							li Duschkabine
+						h3.major Die inneren Werte
+						strong(style='margin-bottom: 10px; display: block') Alles Inklusive
+						//
+							<ul class="altOFF anchor-list">
+							<li>
+							SMART: Hochbett 140*200cm mit integriertem Kleiderschrank
+							</li>
+							<li>Schlafcouch 140*200cm</li>
+							<li>Sony Flat TV</li>
+							<li>Retro Playstation</li>
+							<li>Bose Bluetooth Box</li>
+							<li>Landmann Kugelgrill</li>
+							<li>2 chilly Billy Liegestühle + Astra Tisch</li>
+							<li>2 Penny Boards</li>
+							<li>
+							<strong>Zusatzleistungen:</strong> Wäschepaket (Bettbezug
+							(Kissen & Decke) plus Spannbettlaken, 1 Handtuch) Preis auf
+							Anfrage
+							</li>
+							</ul>
+					.span-2-25(style='z-index: 100')
+						h3.major Pu&#x308;tt &amp; Pann
+						ul.altOFF.anchor-list
+							li Herd, Ceranfeld, Spu&#x308;lmaschine
+							li Ku&#x308;hlschrank mit Gefrierfach
+							li Wasserkocher
+							li Nespresso Kapselmaschine
+							li Old but Gold Keramik Kaffeefilter
+						br
+					.surfer-bg
