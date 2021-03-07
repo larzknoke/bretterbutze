@@ -1,0 +1,117 @@
+///
+/// Ethereal by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Gallery */
+
+	$pad: _size(pad);
+	$pad-small-tb: _size(pad-small-tb);
+	$pad-small-lr: _size(pad-small-lr);
+
+	@include keyframes('gallery-modal-spinner') {
+		0% {
+			@include vendor('transform', 'rotate(0deg)');
+		}
+
+		100% {
+			@include vendor('transform', 'rotate(360deg)');
+		}
+	}
+
+	.gallery {
+		@include vendor('align-items', 'stretch');
+		@include vendor('display', 'flex');
+		height: 100%;
+
+		> * {
+			width: 20rem;
+			height: 100%;
+		}
+
+		.image {
+			display: block;
+			position: relative;
+			border-bottom: 0;
+			overflow: hidden;
+
+			img {
+				@include vendor('transition', 'transform #{_duration(transition)} ease-in-out');
+			}
+
+			&:after {
+				@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
+			}
+
+			&:hover {
+				img {
+					@include vendor('transform', 'scale(1.025)');
+				}
+
+				&:after {
+					opacity: 0;
+				}
+			}
+		}
+
+		.group {
+			@include vendor('display', 'flex');
+			@include vendor('flex-wrap', 'wrap');
+
+			> * {
+				height: 50%;
+			}
+		}
+	}
+
+	@include breakpoint('<=medium') {
+		.gallery {
+			.modal {
+				.inner {
+					img {
+						max-width: 100vw;
+					}
+				}
+			}
+		}
+	}
+
+	@include breakpoint('<=small') {
+		.gallery {
+			@include vendor('flex-direction', 'column');
+			height: auto;
+
+			> * {
+				height: auto;
+				width: 100%;
+			}
+
+			.image {
+				width: 100%;
+				height: 40rem;
+			}
+
+			.group {
+				@include spans(33.33333%);
+
+				.image {
+					height: 20rem;
+				}
+			}
+		}
+	}
+
+	@include breakpoint('<=xsmall') {
+		.gallery {
+			.image {
+				height: 30rem;
+			}
+
+			.group {
+				.image {
+					height: 12.5rem;
+				}
+			}
+		}
+	}

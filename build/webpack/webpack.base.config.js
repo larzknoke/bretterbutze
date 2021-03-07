@@ -13,7 +13,7 @@ module.exports = {
 		sw: path.resolve(paths.srcAssets, "js/sw.js"),
 	},
 	output: {
-		path: path.resolve(paths.dist),
+		path: path.resolve(paths.dist, "assets"),
 	},
 	module: {
 		rules: [
@@ -30,18 +30,18 @@ module.exports = {
 		],
 	},
 	plugins: [
-		new CopyWebpackPlugin([
-			{
-				from: "./src/assets/images/**/*.{png,jpg,jpeg}",
-				to: "./assets/images/[name].webp",
-			},
-		]),
-		new ImageminWebpackPlugin({
-			plugins: [
-				ImageminWebP({
-					quality: 75,
-				}),
-			],
-		}),
+		// new CopyWebpackPlugin([
+		// 	{
+		// 		from: "./src/assets/images/**/*.{png,jpg,jpeg}",
+		// 		to: "./assets/images/[name].webp",
+		// 	},
+		// ]),
+		// new ImageminWebpackPlugin({
+		// 	plugins: [
+		// 		ImageminWebP({
+		// 			quality: 75,
+		// 		}),
+		// 	],
+		// }),
 	],
 };

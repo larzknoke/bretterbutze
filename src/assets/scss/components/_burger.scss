@@ -1,0 +1,54 @@
+/* Important styles */
+.burger {
+  display: block;
+  width: 28px;
+  height: 30px;
+  margin: 15px auto 0px;
+}
+
+.burger span:after,
+.burger span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -9px;
+}
+.burger span:after{
+  top: 9px;
+}
+.burger span {
+  position: relative;
+  display: block;
+}
+
+.burger span,
+.burger span:after,
+.burger span:before {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  @include vendor('transition', (
+    'all #{_duration(transition)} ease-in-out'
+  ));
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+.burger:hover span,
+.burger:hover span:after,
+.burger:hover span:before {
+  background-color: _palette(accent5);
+}
+
+/* on activation */
+.burger.on span {
+  background-color: transparent;
+  color: _palette(accent5);
+}
+.burger.on span:before {
+  transform: rotate(45deg) translate(5px, 5px);
+  background-color: _palette(accent6);
+}
+.burger.on span:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+  background-color: _palette(accent6);
+}
