@@ -168,8 +168,8 @@
 
 @font-face {
 	font-family: "abegan";
-	src: url("../../static/webfonts/abeganshi-webfont.woff2") format("woff2"),
-		url("../../static/webfonts/abeganshi-webfont.woff") format("woff");
+	src: url("/webfonts/abeganshi-webfont.woff2") format("woff2"),
+		url("/webfonts/abeganshi-webfont.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -311,6 +311,7 @@
 	background-color: _palette(accent6);
 	width: 50vw;
 	// height: 5rem;
+	z-index: 99999;
 	padding: 1rem;
 	bottom: 0;
 	right: 5%;
@@ -406,7 +407,13 @@
 	@include vendor("transition", ("all #{_duration(transition)} ease-in-out"));
 	overflow: hidden;
 
+	.content {
+		padding: 2rem;
+	}
+
 	h2 {
+		font-family: "abegan";
+		letter-spacing: 1.15px;
 		position: absolute;
 		// transform: translateY(50px);
 		@include vendor("transition", ("all #{_duration(transition)} ease-in-out"));
@@ -487,4 +494,49 @@
 
 ul.anchor-list {
 	list-style-image: url("../images/anchor.svg");
+}
+
+.img-fader picture {
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+
+@keyframes cf3FadeInOut {
+	0% {
+		opacity: 1;
+	}
+	17% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0;
+	}
+	92% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.img-fader picture:nth-of-type(1) {
+	animation-delay: 9s;
+}
+.img-fader picture:nth-of-type(2) {
+	animation-delay: 6s;
+}
+.img-fader picture:nth-of-type(3) {
+	animation-delay: 3s;
+}
+.img-fader picture:nth-of-type(4) {
+	animation-delay: 0;
+}
+
+.img-fader picture {
+	animation-name: cf3FadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 12s;
 }
