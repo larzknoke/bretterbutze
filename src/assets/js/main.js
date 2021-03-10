@@ -667,7 +667,7 @@ import Cookies from 'js-cookie'
 	//Impressum
 	$(document)
 		.on("click", ".impressum-trigger", function (event) {
-			$modal = $(".modal.impressum");
+			var $modal = $(".modal.impressum");
 
 			// Prevent default.
 			event.preventDefault();
@@ -681,7 +681,7 @@ import Cookies from 'js-cookie'
 			$modal.focus();
 		})
 		.on("click", ".datenschutz-trigger", function (event) {
-			$modal = $(".modal.datenschutz");
+			var $modal = $(".modal.datenschutz");
 
 			// Prevent default.
 			event.preventDefault();
@@ -695,7 +695,7 @@ import Cookies from 'js-cookie'
 			$modal.focus();
 		})
 		.on("click", ".strandallee-modal", function (event) {
-			$modal = $(".modal.strandallee");
+			var $modal = $(".modal.strandallee");
 
 			// Prevent default.
 			event.preventDefault();
@@ -709,7 +709,7 @@ import Cookies from 'js-cookie'
 			$modal.focus();
 		})
 		.on("click", ".terrassenbutze-modal", function (event) {
-			$modal = $(".modal.terrassenbutze");
+			var $modal = $(".modal.terrassenbutze");
 
 			// Prevent default.
 			event.preventDefault();
@@ -723,7 +723,7 @@ import Cookies from 'js-cookie'
 			$modal.focus();
 		})
 		.on("click", ".meerblickbutze-modal", function (event) {
-			$modal = $(".modal.meerblickbutze");
+			var $modal = $(".modal.meerblickbutze");
 
 			// Prevent default.
 			event.preventDefault();
