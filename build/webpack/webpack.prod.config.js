@@ -9,9 +9,6 @@ const cssnano = require("cssnano");
 const WebpackAssetsManifest = require("webpack-assets-manifest");
 
 const autoprefixer = require("autoprefixer");
-const tailwind = require("tailwindcss")(
-	path.resolve(paths.config, "tailwind.config.js")
-);
 const purgecss = require("@fullhuman/postcss-purgecss")({
 	content: [
 		path.resolve(paths.src, "**/*.pug"),
@@ -25,7 +22,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 module.exports = merge(webpackBaseConfig, {
 	mode: "production",
 	output: {
-		filename: "assets/js/[name].[hash].js",
+		filename: "js/[name].[hash].js",
 	},
 	module: {
 		rules: [
@@ -34,13 +31,13 @@ module.exports = merge(webpackBaseConfig, {
 				exclude: /(node_modules)/,
 				use: [
 					MiniCssExtractPlugin.loader,
-					{ loader: "css-loader", options: { importLoaders: 1 } },
+					{ loader: "css-loader", options: { importLoaders: 1, url: false } },
 					{
 						loader: "postcss-loader",
 						options: {
 							ident: "postcss",
 							parser: "postcss-scss",
-							plugins: () => [tailwind, autoprefixer, purgecss],
+							plugins: () => [autoprefixer, purgecss],
 						},
 					},
 					{
@@ -52,11 +49,11 @@ module.exports = merge(webpackBaseConfig, {
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: "assets/css/[name].[chunkhash].css",
+			filename: "css/[name].[chunkhash].css",
 		}),
 		new WebpackAssetsManifest({
 			output: path.resolve(paths.src, "11ty/_data/assets.json"),
-			publicPath: "/",
+			publicPath: "/assets/",
 			writeToDisk: true,
 			apply(manifest) {
 				manifest.set("year", new Date().getFullYear());

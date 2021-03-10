@@ -6,7 +6,10 @@
 		"Bretterbutze",
 		"Groemitz"
 	],
-	"dependencies": {},
+	"dependencies": {
+		"jquery": "^3.4.1",
+		"js-cookie": "^2.2.1"
+	},
 	"devDependencies": {
 		"@11ty/eleventy": "^0.10.0",
 		"@babel/core": "^7.9.0",
@@ -37,7 +40,6 @@
 		"prettier": "^2.0.2",
 		"pug-lint": "^2.6.0",
 		"sass-loader": "^8.0.2",
-		"tailwindcss": "^1.2.0",
 		"terser-webpack-plugin": "^2.3.5",
 		"webpack": "^4.42.1",
 		"webpack-assets-manifest": "^3.1.1",

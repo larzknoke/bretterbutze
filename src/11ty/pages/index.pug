@@ -12,24 +12,24 @@ block content
 					a(href='#sport') Sport
 					a(href='#events') Events
 					a(href='#outbox') Out of the Box
-					a(href='#kontakt') Kontakt
+					a(href='#kontakt') Online Buche
 				.content.color2.span-4-75.start-content(style='position: relative')
 					.panel-bg-start
 					.burger.toggle
 						span
-					h1.major
-						| Willkommen in der
+					h1.major(style="font-size:2.5rem;")
+						| Ahoi und willkommen an Board 
 						br
-						|               Bretterbutze Gr&ouml;mitz
+						| der Bretterbutze Grömitz
 						br
 					p(style='max-width: 80%; z-index: 1000')
-						| Unsere Antworten auf 
+						| Eure Antwort auf 
 						strong Erholung, Strand und Meer
-						|  in
 						br
+						| in 
 						strong &bdquo;Lu&#x308;becker&rsquo;s&ldquo; Bester Bucht!
-					h3(style='display: inline; margin: 8px 15px 0 0')
-						| Hier geht&apos;s zu unseren Butzen:
+					h3(style='display: inline; margin: 8px 15px 0 0') 
+						| Leinen los zu Euren Butzen:
 					ul.actions(style='\
 					display: flex;\
 					align-items: left;\
@@ -94,19 +94,35 @@ block content
 			section.panel.spotlight.small.left.color2.butzen.strandallee-modal(style='width: 18rem')
 				.content
 					h2.major Strandallee
-					h3.on-hover Details hier!
+					h3.on-hover Was geht Strandallee?
+					p.on-hover
+						| Eure
+						strong(style='text-align: center')  POLE POSITION 
+						| im Bretterbutzen TRIO. Als erstes am Start und somit quasi Kult
+						| liegt die Strandallee auch geographisch nur 50 Metern entfernt,
+						| ganz weit vorn am Meer! 
 				.image.filtered.tinted.hover(data-position='center')
 					+picture("/assets/images","butzen/strandallee/Bretterbutze-7",['jpg'], alt="")
 			section.panel.spotlight.small.left.color2.butzen.terrassenbutze-modal(style='width: 18rem')
 				.content
 					h2.major #Terrassenbutze
-					h3.on-hover Details hier!
+					h3.on-hover Was geht #Terrassenbutze?
+					p.on-hover 
+						| Après Beach? Unbedingt auf der großen Sonnenterrasse im Bambus
+						| Liegestuhl, auch zu später Stunde! Vom kleinen Berg seit ihr in
+						| maximal 10 Minuten querfeldein am Strand.
 				.image.filtered.tinted.hover(data-position='center')
 					+picture("/assets/images","butzen/terassenbutze/1",['jpg'], alt="")
 			section.panel.spotlight.small.left.color2.butzen.meerblickbutze-modal(style='width: 18rem')
 				.content
 					h2.major Meer.Blick.Butze
-					h3.on-hover Under Construction!
+					h3.on-hover Was geht Meer.Blick.Butze?
+					p.on-hover 
+						strong Der Hattrick und 
+						| das kleine Geschwisterchen der
+						| Bretterbutze Strandallee. Ideal für 2 Halunken, ganz weit vorn und
+						| somit mit
+						strong  Meer.Blick.
 				.image.filtered.tinted.hover(data-position='center')
 					+picture("/assets/images","renovieren",['jpg'], alt="")
 			//
@@ -349,17 +365,19 @@ block content
 					+picture("/assets/images","butzen/strandallee/Bretterbutze-12",['jpg'], alt="")
 			section#kontakt.panel.color4-alt
 				.intro.color4
-					h2.major Kontakt
+					h2.major Online Buche
 					p
 						strong Bretterbutze Gr&ouml;mitz&reg;
 						br
-						|               Strandallee 3C 
+						| Strandallee 3C 
 						br
-						|               23743 Gr&ouml;mitz 
+						| 23743 Gr&ouml;mitz 
 						br
-						|               Germany
+						| Germany
 				.inner.columns.divided
 					.span-3-25
+						h3 Ahoi Halunke, 
+							| auf Deine elektronische Flaschenpost antworten wir gern zügig! 
 						form#contact-form(accept-charset='UTF-8', action='mail.php', method='POST')
 							.fields
 								.field.half
@@ -370,7 +388,7 @@ block content
 									input#email(type='email', name='email')
 								.field
 									label(for='message') Nachricht
-									textarea#message(name='message', rows='4')
+									textarea#message(name='message', rows='3')
 							.g-recaptcha(data-sitekey='6Lee6bYUAAAAADPEI0M8y-ilOv7SR1IBVmtsQBii', style='padding: 0px 0 15px 0')
 							ul.actions
 								li
@@ -411,17 +429,17 @@ block content
 										| Angaben gem&auml;&szlig; &sect; 5 TMG: 
 										br
 										br
-										|                       Florian Muehe 
+										| Florian Muehe 
 										br
-										|                       Hauptstra&szlig;e 1d 
+										| Hauptstra&szlig;e 1d 
 										br
-										|                       37671 H&ouml;xter 
+										| 37671 H&ouml;xter 
 										br
 										br
 										h3 Kontakt:
-										|                       Telefon: 0162/2520094 
+										| Telefon: 0162/2520094 
 										br
-										|                       E-Mail: info@bretterbutze-groemitz.de
+										| E-Mail: info@bretterbutze-groemitz.de
 				.modal.datenschutz(tabindex='-1')
 					.inner
 						section.panel.color4-alt
@@ -521,20 +539,6 @@ block content
 					+picture("/assets/images","logo_strandallee",['png'], alt="Logo Strandallee", "butzen-logo")
 					//- img.butzen-logo(src='images/logo_strandallee.png', alt='Logo Strandallee')
 					strong(style='margin: 0 auto') Bretterbutze Gr&ouml;mitz&reg;
-					//
-						<h3 class="">Eure Butze</h3>
-						<h1 class="major">Strandallee</h1>
-					//
-						<br />
-						<h3>Was geht Strandallee?</h3>
-					//
-						<p style="text-align: center">
-						Eure
-						<strong style="text-align: center">POLE POSITION</strong>
-						im Bretterbutzen TRIO. Als erstes am Start und somit quasi Kult
-						liegt die Strandallee auch geographisch nur 50 Metern entfernt,
-						ganz weit vorn am Meer!
-						</p>
 				.inner.columns.aligned
 					.span-2-25(style='z-index: 100')
 						strong(style='margin-bottom: 20px; display: block') Nicht viel sabbeln...Details in der Fischbu&#x308;chse:
@@ -571,16 +575,6 @@ block content
 				.intro.color2
 					+picture("/assets/images","logo_terrassenbutze",['png'], alt="", classname="butzen-logo")
 					strong(style='margin: 0 auto') Bretterbutze Gr&ouml;mitz&reg;
-					//
-						<h3 class="">Eure Butze</h3>
-						<h1 class="major">#Terrassenbutze</h1>
-						<br />
-						<h3>Was geht #Terrassenbutze?</h3>
-						<p>
-						Après Beach? Unbedingt auf der großen Sonnenterrasse im Bambus
-						Liegestuhl, auch zu später Stunde! Vom kleinen Berg seit ihr in
-						maximal 10 Minuten querfeldein am Strand.
-						</p>
 				.inner.columns.aligned
 					.span-2-25(style='z-index: 100')
 						strong(style='margin-bottom: 20px; display: block') Nicht viel sabbeln...Details in der Fischbu&#x308;chse:

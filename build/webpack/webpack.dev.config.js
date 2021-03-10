@@ -6,9 +6,6 @@ const chokidar = require("chokidar");
 const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WebpackAssetsManifest = require("webpack-assets-manifest");
-const tailwind = require("tailwindcss")(
-	path.resolve(paths.config, "tailwind.config.js")
-);
 module.exports = merge(webpackBaseConfig, {
 	mode: "development",
 	output: {
@@ -31,7 +28,7 @@ module.exports = merge(webpackBaseConfig, {
 						options: {
 							ident: "postcss",
 							parser: "postcss-scss",
-							plugins: () => [tailwind],
+							plugins: () => [],
 						},
 					},
 					{
