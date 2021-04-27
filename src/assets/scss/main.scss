@@ -413,7 +413,7 @@
 
 	h2 {
 		font-family: "abegan";
-		letter-spacing: 1.15px;
+		letter-spacing: 1.5px;
 		position: absolute;
 		// transform: translateY(50px);
 		@include vendor("transition", ("all #{_duration(transition)} ease-in-out"));
@@ -451,7 +451,34 @@
 }
 
 .modal.large .inner {
-	height: 85vh !important;
+	height: 100vh !important;
+	width: 100vw !important;
+}
+@include breakpoint('>large') {
+	.modal.large .inner {
+		height: 85vh !important;
+		width: 85vw !important;
+	}
+}
+
+@include breakpoint('<=large') {
+	.modal.large .inner .panel.banner.left {
+		flex-direction: column;
+		align-items: center;
+	}
+	.modal.large .panel > *.color2 {
+		background: none;
+	}
+	.modal.large .panel .intro picture {
+		margin: 20px 0px
+	}
+	.modal.large .panel  {
+		height: initial;
+	}
+	.modal.large > .inner {
+		overflow-y: scroll;
+		// overflow-x: hidden;
+	}
 }
 
 .modal .intro.large {
