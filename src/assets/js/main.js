@@ -795,4 +795,12 @@ import Cookies from 'js-cookie'
 			});
 		}
 	});
+
+	$(".start-player").on("click", function (event) {
+		var player = document.getElementById("player");
+		$(this).toggleClass("playing")
+		return player.paused ? player.play() : player.pause();
+	})
+	
+	
 })(jQuery);

@@ -323,7 +323,7 @@
 @include breakpoint("<=small") {
 	section.start-section.panel.banner {
 		.image {
-			height: 30rem;
+			height: 34rem;
 
 			img {
 				-moz-object-position: 25% 45%;
@@ -352,6 +352,9 @@
 			a {
 				padding: 0.75rem 2rem;
 			}
+		}
+		.hide-on-small {
+			display: none !important;
 		}
 	}
 
@@ -418,25 +421,56 @@
 		// transform: translateY(50px);
 		@include vendor("transition", ("all #{_duration(transition)} ease-in-out"));
 	}
-	.on-hover {
-		margin-top: 1rem;
-		opacity: 0;
-		transform: translateY(10px);
-		@include vendor("transition", ("all #{_duration(transition)} ease-in-out"));
-	}
 
-	&:hover {
-		cursor: pointer;
-	}
-	&:hover .on-hover,
-	&:hover .on-hover strong {
+
+	& .on-hover,
+	& .on-hover strong {
 		opacity: 1;
-		transform: translateY(0);
+		transform: translateY(50px);
 		color: _palette(accent2) !important;
 	}
-	&:hover h2 {
-		transform: translateY(-50px);
-		opacity: 0;
+	& h2 {
+		position: relative;
+		margin: 0 !important;
+	}
+	& h3.only-touch {
+		transform: translateY(40px);
+		color: _palette(accent2) !important;
+
+	}
+}
+
+@media(hover: hover) and (pointer: fine) {
+	.panel.spotlight.butzen {
+
+		h2 {
+			position: absolute;
+		}
+
+		.on-hover {
+			margin-top: 1rem;
+			opacity: 0;
+			transform: translateY(10px);
+			@include vendor("transition", ("all #{_duration(transition)} ease-in-out"));
+		}
+		
+		h3.only-touch {
+			display: none;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+		&:hover .on-hover,
+		&:hover .on-hover strong {
+			opacity: 1;
+			transform: translateY(0);
+			color: _palette(accent2) !important;
+		}
+		&:hover h2 {
+			transform: translateY(-50px);
+			opacity: 0;
+		}
 	}
 }
 
@@ -451,7 +485,7 @@
 }
 
 .modal.large .inner {
-	height: 100vh !important;
+	height: 100%;
 	width: 100vw !important;
 }
 @include breakpoint('>large') {
@@ -479,6 +513,40 @@
 		overflow-y: scroll;
 		// overflow-x: hidden;
 	}
+}
+@include breakpoint('<=medium') {
+	.modal.large .inner .panel .span-2-25 {
+		width: 45%;
+	}
+
+}
+@include breakpoint('<=small') {
+	.modal.large .inner .panel .span-2-25 {
+		width: 100%;
+	}
+	.modal .panel.banner .image img {
+		height: 100% !important;
+		margin-bottom: 20rem;
+	}
+	.modal .panel.banner .image {
+		margin-bottom: 1rem;
+	}
+	.modal.large .panel .intro  {
+		align-items: center;
+		padding: 1.5rem !important;
+	}
+	.modal.large .panel .inner  {
+		padding-top: 0.7rem !important;
+	}
+	.modal.large .panel .intro img  {
+		max-height: 20rem;
+		margin-bottom: 1rem;
+	}
+	.panel.spotlight.butzen h2 {
+		font-size: 2.5rem;
+		letter-spacing: 2px;
+	}
+
 }
 
 .modal .intro.large {
@@ -549,15 +617,30 @@ ul.anchor-list {
 }
 
 .img-fader picture:nth-of-type(1) {
-	animation-delay: 9s;
+	animation-delay: 24s;
 }
 .img-fader picture:nth-of-type(2) {
-	animation-delay: 6s;
+	animation-delay: 21s;
 }
 .img-fader picture:nth-of-type(3) {
-	animation-delay: 3s;
+	animation-delay: 18s;
 }
 .img-fader picture:nth-of-type(4) {
+	animation-delay: 15s;
+}
+.img-fader picture:nth-of-type(5) {
+	animation-delay: 12s;
+}
+.img-fader picture:nth-of-type(6) {
+	animation-delay: 9s;
+}
+.img-fader picture:nth-of-type(7) {
+	animation-delay: 6s;
+}
+.img-fader picture:nth-of-type(8) {
+	animation-delay: 3s;
+}
+.img-fader picture:nth-of-type(9) {
 	animation-delay: 0;
 }
 
@@ -565,5 +648,42 @@ ul.anchor-list {
 	animation-name: cf3FadeInOut;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
-	animation-duration: 12s;
+	animation-duration: 30s;
+}
+
+
+#page-wrapper > img.start-player {
+	position: absolute;
+	width: 4rem;
+	top: 3%;
+	left: 7%;
+	@include vendor("transition", ("all #{_duration(transition)} ease-in-out"));
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&.playing {
+		animation: zoom 1.2s ease alternate infinite;
+	}
+
+
+	@keyframes zoom {
+		from{
+			transform: scale(1.0);
+		}
+		
+		to{
+			transform: scale(1.1);
+		}
+	}
+}
+
+
+.butzen-links {
+	font-family: 'abegan'; 
+	letter-spacing: 1.7px;
+	text-transform: capitalize !important;
+	font-size: 2.3rem !important;
+	border-bottom: 0 !important;
 }

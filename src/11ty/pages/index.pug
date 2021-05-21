@@ -2,6 +2,9 @@ extends ../_includes/layouts/default.pug
 
 block content
 	#page-wrapper
+		img.start-player(src="/assets/images/radio.svg", alt="")
+		audio#player
+			source(src='assets/images/BretterbutzeV3.mp3')
 		#wrapper
 			section.panel.banner.color4-alt.right.start-section(style='position: relative')
 				.menu
@@ -18,17 +21,14 @@ block content
 					.burger.toggle
 						span
 					h1.major(style="font-size:2.5rem;")
-						| Ahoi und willkommen an Board 
-						br
-						| der Bretterbutze Grömitz
-						br
+						| Endlich Bretterbutze
 					p(style='max-width: 80%; z-index: 1000')
 						| Eure Antwort auf 
 						strong Erholung, Strand und Meer
-						br
+						br.hide-on-small
 						| in 
 						strong &bdquo;Lu&#x308;becker&rsquo;s&ldquo; Bester Bucht!
-					h3(style='display: inline; margin: 8px 15px 0 0') 
+					p(style='display: inline; margin: 8px 15px 10px 0') 
 						| Leinen los zu Euren Butzen:
 					ul.actions(style='\
 					display: flex;\
@@ -37,11 +37,11 @@ block content
 					flex-direction: column;\
 					')
 						li
-							a(href='#') Strandallee
+							a.butzen-links.strandallee-modal(href='#') Strandallee
 						li
-							a(href='#') #Terrassenbutze
+							a.butzen-links.terrassenbutze-modal(href='#') #Terrassenbutze
 						li
-							a(href='#') Meer.Blick.Butze
+							a.butzen-links.meerblickbutze-modal(href='#') Meer.Blick.Butze
 				.image.filtered.span-2-25(data-position='25% 35%')
 					+picture("/assets/images","logo_groemitz",['jpg'], alt="")
 			// Panel (Spotlight)
@@ -50,23 +50,29 @@ block content
 					//
 						<h2 class="major">Sed etiam aenean</h2>
 						<p>Mauris et ligula arcu. Proin dapibus convallis accumsan. Lorem maximus hendrerit orci, sit amet elementum massa hendrerit sed. Donec et ullamcorper ligula. Suspendisse amet potenti. Ut pretium libero eleifend euismod sed tristique. Quisque dictum magna risus, id ultricies justo sagittis vitae. Sed id odio tempor, porttitor elit amet, gravida hendrerit fringilla lorem ipsum dolor.</p>
-				.image.filtered.tinted.img-fader(data-position='bottom')
-					+picture("/assets/images","butzen/strandallee/Bretterbutze-1",['jpg'], alt="")
-					+picture("/assets/images","butzen/strandallee/Bretterbutze-2",['jpg'], alt="")
-					+picture("/assets/images","butzen/strandallee/Bretterbutze-3",['jpg'], alt="")
-					+picture("/assets/images","butzen/strandallee/Bretterbutze-6",['jpg'], alt="")
+				.image.filtered.tinted.img-fader(data-position='center')
+					+picture("/assets/images","butzen/terassenbutze/26",['jpg'], alt="")
+					+picture("/assets/images","butzen/terassenbutze/11",['jpg'], alt="")
+					+picture("/assets/images","butzen/terassenbutze/2",['jpg'], alt="")
+					+picture("/assets/images","butzen/terassenbutze/5",['jpg'], alt="")
+					+picture("/assets/images","butzen/strandallee/Bretterbutze-12",['jpg'], alt="")
+					+picture("/assets/images","butzen/strandallee/Bretterbutze-9",['jpg'], alt="")
+					+picture("/assets/images","butzen/strandallee/neu/strand_essen_neu",['jpg'], alt="")
+					+picture("/assets/images","butzen/strandallee/neu/strand_nacht",['jpg'], alt="")
+					+picture("/assets/images","butzen/strandallee/neu/strand_heizung_whz",['jpg'], alt="")
+					+picture("/assets/images","butzen/strandallee/neu/strand_bett_neu",['jpg'], alt="")
 			// Panel (Spotlight)
 			section#warum.panel.color4-alt
-				.inner.columns.divided
+				.inner.columns.divided(style="padding-top: 15%; align-items: baseline !important")
 					.content.span-2-5
 						h2.major Warum Bretterbutze?
 						p
 							| Easy! 
 							strong ERSTE REIHE
 							| , Strandallee,
-							strong mit oder ohne Meer.Blick.
+							strong  mit oder ohne Meer.Blick.
 							| , oder entspannt am
-							strong Berg mit Sonnendeck!
+							strong  Berg mit Sonnendeck!
 					.content.span-2-75
 						h2.major
 							| Wer
@@ -104,6 +110,7 @@ block content
 						| im Bretterbutzen TRIO. Als erstes am Start und somit quasi Kult
 						| liegt die Strandallee auch geographisch nur 50 Metern entfernt,
 						| ganz weit vorn am Meer! 
+					h3.only-touch Details hier »
 				.image.filtered.tinted.hover(data-position='center')
 					+picture("/assets/images","butzen/strandallee/Bretterbutze-7",['jpg'], alt="")
 			section.panel.spotlight.small.left.color2.butzen.terrassenbutze-modal(style='width: 18rem')
@@ -112,8 +119,9 @@ block content
 					h3.on-hover Was geht #Terrassenbutze?
 					p.on-hover 
 						| Après Beach? Unbedingt auf der großen Sonnenterrasse im Bambus
-						| Liegestuhl, auch zu später Stunde! Vom kleinen Berg seit ihr in
-						| maximal 10 Minuten querfeldein am Strand.
+						| Liegestuhl, auch zu später Stunde! 
+						| Vom kleinen Berg seid ihr ca 10 Minuten querfeldein am Beach
+					h3.only-touch Details hier »
 				.image.filtered.tinted.hover(data-position='center')
 					+picture("/assets/images","butzen/terassenbutze/1",['jpg'], alt="")
 			section.panel.spotlight.small.left.color2.butzen.meerblickbutze-modal(style='width: 18rem')
@@ -126,6 +134,7 @@ block content
 						| Bretterbutze Strandallee. Ideal für 2 Halunken, ganz weit vorn und
 						| somit mit
 						strong  Meer.Blick.
+					h3.only-touch Details hier »
 				.image.filtered.tinted.hover(data-position='center')
 					+picture("/assets/images","renovieren",['jpg'], alt="")
 			//
@@ -172,8 +181,12 @@ block content
 			section#preise.panel.color4-alt
 				.inner.columns.divided
 					.span-1-5
-						h1.major Kalender
+						h1.major Merge
 						br
+						p 
+							| Ihr seid alle Butze!  🏴‍☠️
+							br
+							| Holt Euch die Butze nach Hause!
 						//
 							<div class="table-wrapper">
 							<table>
@@ -197,12 +210,12 @@ block content
 							</table>
 							</div>
 					.span-5
-						#traumfewo-calendar-274779.tfw-calendar-app(data-base_url='www.traum-ferienwohnungen.de', data-language_id='1', data-startmonth='0', data-numberofmonths='3', data-listingid='274779')
+						//- #traumfewo-calendar-274779.tfw-calendar-app(data-base_url='www.traum-ferienwohnungen.de', data-language_id='1', data-startmonth='0', data-numberofmonths='3', data-listingid='274779')
 							a#calendar-link-274779(href='https://traum-ferienwohnungen.de/274779')
 								| Ferienwohnung Bretterbutze Strandallee auf
 								| traum-ferienwohnungen.de
-						script(src='https://static2.traum-ferienwohnungen.de/vmb-public/cache/js/calendarWidget.js', type='application/javascript')
-						script(type='application/javascript').
+						//- script(src='https://static2.traum-ferienwohnungen.de/vmb-public/cache/js/calendarWidget.js', type='application/javascript')
+						//- script(type='application/javascript').
 							function createWidget274779() {
 							var calendarNode = document.getElementById(
 							"traumfewo-calendar-274779"
@@ -233,31 +246,30 @@ block content
 			section#gallerie.panel
 				.gallery
 					.group.span-3
-						a.image.filtered.span-3(href='assets/images/butzen/strandallee/Bretterbutze-1.jpg', data-position='center')
-							+picture("/assets/images","butzen/strandallee/Bretterbutze-1",['jpg'], alt="")
-						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/Bretterbutze-12.jpg', data-position='center')
-							+picture("/assets/images","butzen/strandallee/Bretterbutze-12",['jpg'], alt="")
+						a.image.filtered.span-3(href='assets/images/butzen/strandallee/neu/strand_bett_neu.jpg', data-position='center')
+							+picture("/assets/images","butzen/strandallee/neu/strand_bett_neu",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/neu/strand_bruecke_nachts.jpg', data-position='center')
+							+picture("/assets/images","butzen/strandallee/neu/strand_bruecke_nachts",['jpg'], alt="")
 						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/Bretterbutze-6.jpg', data-position='bottom')
 							+picture("/assets/images","butzen/strandallee/Bretterbutze-6",['jpg'], alt="")
-					a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/Bretterbutze-7.jpg', data-position='top')
-						+picture("/assets/images","butzen/strandallee/Bretterbutze-7",['jpg'], alt="")
+					a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/neu/strand_essen_neu.jpg', data-position='top')
+						+picture("/assets/images","butzen/strandallee/neu/strand_essen_neu",['jpg'], alt="")
 					.group.span-3
-						a.image.filtered.span-3(href='assets/images/butzen/strandallee/Bretterbutze-9.jpg', data-position='center')
-							+picture("/assets/images","butzen/strandallee/Bretterbutze-9",['jpg'], alt="")
 						a.image.filtered.span-1-5(href='assets/images/stock/wasser.jpg', data-position='center')
 							+picture("/assets/images","stock/wasser",['jpg'], alt="")
-						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/Bretterbutze-2.jpg', data-position='bottom')
-							+picture("/assets/images","butzen/strandallee/Bretterbutze-2",['jpg'], alt="")
-					// <a href="images/butzen/strandallee/Bretterbutze-5.jpg" class="image filtered span-3" data-position="bottom"><img src="images/butzen/strandallee/Bretterbutze-5.jpg" alt="" /></a>
-					a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/Bretterbutze-10.jpg', data-position='center')
-						+picture("/assets/images","butzen/strandallee/Bretterbutze-10",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/butzen/terassenbutze/4.jpg', data-position='center')
+							+picture("/assets/images","butzen/terassenbutze/4",['jpg'], alt="")
+						a.image.filtered.span-3(href='assets/images/butzen/strandallee/Bretterbutze-9.jpg', data-position='center')
+							+picture("/assets/images","butzen/strandallee/Bretterbutze-9",['jpg'], alt="")
+					a.image.filtered.span-2-5(href='assets/images/butzen/terassenbutze/1.jpg', data-position='center')
+						+picture("/assets/images","butzen/terassenbutze/1",['jpg'], alt="")
 					.group.span-3
-						a.image.filtered.span-3(href='assets/images/butzen/strandallee/bad3.jpg', data-position='center')
-							+picture("/assets/images","butzen/strandallee/bad3",['jpg'], alt="")
-						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/tasse.jpg', data-position='center')
-							+picture("/assets/images","butzen/strandallee/tasse",['jpg'], alt="")
-						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/bad1.jpg', data-position='center')
-							+picture("/assets/images","butzen/strandallee/bad1",['jpg'], alt="")
+						a.image.filtered.span-3(href='assets/images/butzen/terassenbutze/11.jpg', data-position='center')
+							+picture("/assets/images","butzen/terassenbutze/11",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/butzen/terassenbutze/18.jpg', data-position='center')
+							+picture("/assets/images","butzen/terassenbutze/18",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/butzen/terassenbutze/23.jpg', data-position='center')
+							+picture("/assets/images","butzen/terassenbutze/23",['jpg'], alt="")
 					a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/bad2.jpg', data-position='center')
 						+picture("/assets/images","butzen/strandallee/bad2",['jpg'], alt="")
 					// <a href="images/butzen/strandallee/tasse.jpg" class="image filtered span-2-5" data-position="center"><img src="images/butzen/strandallee/tasse.jpg"alt="" /></a>
@@ -368,7 +380,7 @@ block content
 					+picture("/assets/images","butzen/strandallee/Bretterbutze-12",['jpg'], alt="")
 			section#kontakt.panel.color4-alt
 				.intro.color4
-					h2.major Online Buche
+					h2.major Online Buchung
 					p
 						strong Bretterbutze Gr&ouml;mitz&reg;
 						br
@@ -405,8 +417,6 @@ block content
 								a(target='_blank', rel='noopener noreferrer', href='https://www.instagram.com/bretterbutze_groemitz/') @instagram
 							li.icon.brands.fa-fort-awesome
 								a(target='_blank', rel='noopener noreferrer', href='https://www.traum-ferienwohnungen.de/274779/') @traum-fewo
-							li.icon.brands.fa-airbnb
-								a(target='_blank', rel='noopener noreferrer', href='https://www.airbnb.de/rooms/37320091?s=67&shared_item_type=1&virality_entry_point=1&sharer_id=282151517') @airbnb
 							li.icon.fa-envelope
 								a(target='_blank', rel='noopener noreferrer', href='mailto:info@bretterbutze-groemitz.de') info@bretterbutze-groemitz.de
 			// Copyright
@@ -547,7 +557,7 @@ block content
 						strong(style='margin-bottom: 20px; display: block') Nicht viel sabbeln...Details in der Fischbu&#x308;chse:
 						h3.major BOSS Size
 						ul.altOFF.anchor-list
-							li 2 ZKB | 40qm Butze
+							li 2 Zimmer Koje | 40 qm
 							li 4 Piraten (m/w/d)
 							li Nasszelle mit Rainforest Dusche + F&ouml;n
 						h3.major Butzen Inclusive
@@ -564,11 +574,11 @@ block content
 						br
 					.span-2-25(style='z-index: 100')
 						.image.filtered.tinted
-							+picture("/assets/images","butzen/strandallee/Bretterbutze-1",['jpg'], alt="")
+							+picture("/assets/images","butzen/strandallee/neu/strand_bett_neu",['jpg'], alt="")
 						.image.filtered.tinted
-							+picture("/assets/images","butzen/strandallee/Bretterbutze-2",['jpg'], alt="")
+							+picture("/assets/images","butzen/strandallee/Bretterbutze-9",['jpg'], alt="")
 						.image.filtered.tinted
-							+picture("/assets/images","butzen/strandallee/Bretterbutze-3",['jpg'], alt="")
+							+picture("/assets/images","butzen/strandallee/neu/strand_heizung_whz",['jpg'], alt="")
 						br
 						br
 					.surfer-bg
@@ -583,7 +593,8 @@ block content
 						strong(style='margin-bottom: 20px; display: block') Nicht viel sabbeln...Details in der Fischbu&#x308;chse:
 						h3.major Hoch sollst Du leben!
 						ul.altOFF.anchor-list
-							li 1ZKB I 35qm Butze plus 20qmo Sonnenterrasse
+							li 1 Zimmer Koje I 35 qm 
+							li 20 qm Sonnenterrasse
 							li 2-4 Piraten (m/w/d)
 							li Duschkabine mit Waschmaschine, Trockner &amp; F&ouml;n
 						h3.major Butzen Inclusive
@@ -600,11 +611,11 @@ block content
 						br
 					.span-2-25(style='z-index: 100')
 						.image.filtered.tinted
-							+picture("/assets/images","butzen/strandallee/Bretterbutze-1",['jpg'], alt="")
+							+picture("/assets/images","butzen/terassenbutze/5",['jpg'], alt="")
 						.image.filtered.tinted
-							+picture("/assets/images","butzen/strandallee/Bretterbutze-2",['jpg'], alt="")
+							+picture("/assets/images","butzen/terassenbutze/2",['jpg'], alt="")
 						.image.filtered.tinted
-							+picture("/assets/images","butzen/strandallee/Bretterbutze-3",['jpg'], alt="")
+							+picture("/assets/images","butzen/terassenbutze/1",['jpg'], alt="")
 						br
 						br
 					.surfer-bg
@@ -630,7 +641,8 @@ block content
 						h3.major High Life
 						strong(style='margin-bottom: 10px; display: block') Nicht viel sabbeln...Details in der Fischbu&#x308;chse:
 						ul.altOFF.anchor-list
-							li 1ZKB I 25qm Wohnfl&auml;che I 2 Piraten (m/w/d)
+							li 1 Zimmer Koje I 25 qm Wohnfl&auml;che
+							li 2 Piraten (m/w/d)
 							li Duschkabine
 						h3.major Die inneren Werte
 						strong(style='margin-bottom: 10px; display: block') Alles Inklusive
