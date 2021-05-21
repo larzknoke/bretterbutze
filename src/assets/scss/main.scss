@@ -5,7 +5,6 @@
 @import "libs/breakpoints";
 // @import "fontawesome-all.min.css";
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300i,400i,600");
-@import url("~@fancyapps/fancybox/dist/jquery.fancybox.css");
 
 /*
 	Ethereal by HTML5 UP
@@ -687,4 +686,13 @@ ul.anchor-list {
 	text-transform: capitalize !important;
 	font-size: 2.3rem !important;
 	border-bottom: 0 !important;
+}
+
+
+
+@include breakpoint('<=medium') {
+	.meerblickbutze-modal h2.major {
+		font-size: 2rem !important;	
+	}
+
 }
