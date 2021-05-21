@@ -1,7 +1,10 @@
-import jQuery from "jquery";
+import $ from "jquery";
+window.jQuery = $;
+window.$ = $;
 import browser from "./browser.min";
 import breakpoints from "./breakpoints.min";
-import Cookies from 'js-cookie'
+import Cookies from 'js-cookie';
+require("@fancyapps/fancybox");
 
 
 (function ($) {
