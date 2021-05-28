@@ -801,7 +801,7 @@ require("@fancyapps/fancybox");
 
 	$(".start-player").on("click", function (event) {
 		var player = document.getElementById("player");
-		$(this).toggleClass("playing")
+		$(this).children("img").toggleClass("playing")
 		return player.paused ? player.play() : player.pause();
 	})
 	

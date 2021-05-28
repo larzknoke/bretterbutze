@@ -2,15 +2,19 @@ extends ../_includes/layouts/default.pug
 
 block content
 	#page-wrapper
-		img.start-player(src="/assets/images/radio.svg", alt="")
-		audio#player
-			source(src='assets/images/BretterbutzeV3.mp3')
 		#wrapper
+			.start-player
+				img(src="/assets/images/radio.svg", alt="")
+				p 
+					| FM 
+					span Bretterbutze Grömitz
+				audio#player
+					source(src='assets/images/BretterbutzeV3.mp3')
 			section.panel.banner.color4-alt.right.start-section(style='position: relative')
 				.menu
 					a(href='#warum') Warum Bretterbutze?
 					a(href='#butze') Die Butze
-					a(href='#preise') Preise
+					a(href='#merge') Merge
 					a(href='#gallerie') Gallerie
 					a(href='#sport') Sport
 					a(href='#events') Events
@@ -22,13 +26,10 @@ block content
 						span
 					h1.major(style="font-size:2.5rem;")
 						| Endlich Bretterbutze
-					p(style='max-width: 80%; z-index: 1000')
+					p(style='max-width: 90%; z-index: 1000')
 						| Eure Antwort auf 
-						strong Erholung, Strand und Meer
-						br.hide-on-small
-						| in 
-						strong &bdquo;Lu&#x308;becker&rsquo;s&ldquo; Bester Bucht!
-					p(style='display: inline; margin: 8px 15px 10px 0') 
+						strong Erholung, Strand und Meer in „Lübecker’s“ Bester Bucht!
+					p(style='display: inline; margin: 7% 15px 10px 0') 
 						| Leinen los zu Euren Butzen:
 					ul.actions(style='\
 					display: flex;\
@@ -96,7 +97,7 @@ block content
 			// Panel
 			section.panel.banner.left
 				.image.span-2.filtered.tinted(data-position='center')
-					+picture("/assets/images","butzen/strandallee/Bretterbutze-14",['jpg'], alt="")
+					+picture("/assets/images","butzen/strandallee/Bretterbutze-7",['jpg'], alt="")
 			section#butze.panel.banner.left.color2
 				.intro.color2
 					h1.major Die Butzen
@@ -112,7 +113,7 @@ block content
 						| ganz weit vorn am Meer! 
 					h3.only-touch Details hier »
 				.image.filtered.tinted.hover(data-position='center')
-					+picture("/assets/images","butzen/strandallee/Bretterbutze-7",['jpg'], alt="")
+					+picture("/assets/images","butzen/strandallee/neu/strand_heizung_whz",['jpg'], alt="")
 			section.panel.spotlight.small.left.color2.butzen.terrassenbutze-modal(style='width: 18rem')
 				.content
 					h2.major #Terrassenbutze
@@ -178,7 +179,7 @@ block content
 				</div>
 				</section>
 			// Panel
-			section#preise.panel.color4-alt
+			section#merge.panel.color4-alt
 				.inner.columns.divided
 					.span-1-5
 						h1.major Merge
@@ -187,62 +188,21 @@ block content
 							| Ihr seid alle Butze!  🏴‍☠️
 							br
 							| Holt Euch die Butze nach Hause!
-						//
-							<div class="table-wrapper">
-							<table>
-							<tbody>
-							<tr>
-							<td>Ollie Season</td>
-							<td>(4.10.-1.11.19)</td>
-							<td>65€/N</td>
-							</tr>
-							<tr>
-							<td>Kick Flip Season</td>
-							<td>(1.11.-23.12.19)</td>
-							<td>70€/N</td>
-							</tr>
-							<tr>
-							<td>360* Flip Season</td>
-							<td>(23.12.-11.01.20)</td>
-							<td>85€/N</td>
-							</tr>
-							</tbody>
-							</table>
-							</div>
+
 					.span-5
-						//- #traumfewo-calendar-274779.tfw-calendar-app(data-base_url='www.traum-ferienwohnungen.de', data-language_id='1', data-startmonth='0', data-numberofmonths='3', data-listingid='274779')
-							a#calendar-link-274779(href='https://traum-ferienwohnungen.de/274779')
-								| Ferienwohnung Bretterbutze Strandallee auf
-								| traum-ferienwohnungen.de
-						//- script(src='https://static2.traum-ferienwohnungen.de/vmb-public/cache/js/calendarWidget.js', type='application/javascript')
-						//- script(type='application/javascript').
-							function createWidget274779() {
-							var calendarNode = document.getElementById(
-							"traumfewo-calendar-274779"
-							);
-							var calendarWidget = new window.tfw.CalendarWidget(
-							calendarNode
-							);
-							calendarWidget.throttle("resize", "optimizedResize");
-							window.addEventListener(
-							"resize",
-							function () {
-							calendarWidget.update();
-							},
-							false
-							);
-							calendarWidget.init();
-							}
-							window.addEventListener(
-							"load",
-							function (event) {
-							createWidget274779();
-							},
-							false
-							);
-							if (window.tfw && window.tfw.CalendarWidget) {
-							createWidget274779();
-							}
+						.table-wrapper
+							table
+								tbody
+									tr
+										td Poster
+										td 19,95 € inkl. Versand
+									tr
+										td Postkarte
+										td 2,95 € inkl. Versand
+									tr
+										td Aufkleber
+										td 1,95 € inkl. Versand
+
 			section#gallerie.panel
 				.gallery
 					.group.span-3
@@ -250,8 +210,8 @@ block content
 							+picture("/assets/images","butzen/strandallee/neu/strand_bett_neu",['jpg'], alt="")
 						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/neu/strand_bruecke_nachts.jpg', data-position='center')
 							+picture("/assets/images","butzen/strandallee/neu/strand_bruecke_nachts",['jpg'], alt="")
-						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/Bretterbutze-6.jpg', data-position='bottom')
-							+picture("/assets/images","butzen/strandallee/Bretterbutze-6",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/neu/strand_heizung_whz.jpg', data-position='bottom')
+							+picture("/assets/images","butzen/strandallee/neu/strand_heizung_whz",['jpg'], alt="")
 					a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/neu/strand_essen_neu.jpg', data-position='top')
 						+picture("/assets/images","butzen/strandallee/neu/strand_essen_neu",['jpg'], alt="")
 					.group.span-3
@@ -259,15 +219,15 @@ block content
 							+picture("/assets/images","stock/wasser",['jpg'], alt="")
 						a.image.filtered.span-1-5(href='assets/images/butzen/terassenbutze/4.jpg', data-position='center')
 							+picture("/assets/images","butzen/terassenbutze/4",['jpg'], alt="")
-						a.image.filtered.span-3(href='assets/images/butzen/strandallee/Bretterbutze-9.jpg', data-position='center')
-							+picture("/assets/images","butzen/strandallee/Bretterbutze-9",['jpg'], alt="")
+						a.image.filtered.span-3(href='assets/images/butzen/terassenbutze/2.jpg', data-position='center')
+							+picture("/assets/images","butzen/terassenbutze/2",['jpg'], alt="")
 					a.image.filtered.span-2-5(href='assets/images/butzen/terassenbutze/1.jpg', data-position='center')
 						+picture("/assets/images","butzen/terassenbutze/1",['jpg'], alt="")
 					.group.span-3
 						a.image.filtered.span-3(href='assets/images/butzen/terassenbutze/11.jpg', data-position='center')
 							+picture("/assets/images","butzen/terassenbutze/11",['jpg'], alt="")
-						a.image.filtered.span-1-5(href='assets/images/butzen/terassenbutze/18.jpg', data-position='center')
-							+picture("/assets/images","butzen/terassenbutze/18",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/neu/sofa-neu-1-tiny.jpg', data-position='center')
+							+picture("/assets/images","butzen/strandallee/neu/sofa-neu-1-tiny",['jpg'], alt="")
 						a.image.filtered.span-1-5(href='assets/images/butzen/terassenbutze/23.jpg', data-position='center')
 							+picture("/assets/images","butzen/terassenbutze/23",['jpg'], alt="")
 					a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/bad2.jpg', data-position='center')
@@ -577,8 +537,8 @@ block content
 							a(href='/assets/images/butzen/strandallee/neu/strand_bett_neu.jpg' data-fancybox data-caption='Strandallee #1')
 								img(src='/assets/images/butzen/strandallee/neu/strand_bett_neu.jpg' alt='')
 						.image.filtered.tinted
-							a(href='/assets/images/butzen/strandallee/Bretterbutze-9.jpg' data-fancybox data-caption='Strandallee #2')
-								img(src='/assets/images/butzen/strandallee/Bretterbutze-9.jpg' alt='')
+							a(href='/assets/images/butzen/strandallee/neu/wohnzimmer-neu-tiny.jpg' data-fancybox data-caption='Strandallee #2')
+								img(src='/assets/images/butzen/strandallee/neu/wohnzimmer-neu-tiny.jpg' alt='')
 						.image.filtered.tinted
 							a(href='/assets/images/butzen/strandallee/neu/strand_heizung_whz.jpg' data-fancybox data-caption='Strandallee #2')
 								img(src='/assets/images/butzen/strandallee/neu/strand_heizung_whz.jpg' alt='')
