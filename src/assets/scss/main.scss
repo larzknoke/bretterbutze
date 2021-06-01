@@ -711,7 +711,40 @@ ul.anchor-list {
 
 }
 
+#merge {
+	overflow: hidden;
+}
+.merge {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: row;
+	width: auto !important;
+	overflow: hidden;
 
-table.align-middle td{
-	vertical-align: middle;
+	.mergebild {
+		margin-left: 2rem;
+	}
+}
+
+@include breakpoint('<=small') {
+	.merge {
+		display: block !important;
+			.mergebild {
+				margin-left: 0rem !important;
+				img {
+					height: 19rem !important;
+				}
+			}
+		}
+	}
+
+
+table.align-middle {
+	td{
+		vertical-align: middle;
+	}
+	td:last-child{
+		white-space: nowrap;
+	}
 }
