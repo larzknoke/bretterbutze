@@ -26,10 +26,14 @@ block content
 						span
 					h1.major(style="font-size:2.5rem;")
 						| Endlich Bretterbutze
-					p(style='max-width: 90%; z-index: 1000')
+					p(style='max-width: 90%; z-index: 1000; margin-bottom:5px')
 						| Eure Antwort auf 
 						strong Erholung, Strand und Meer in „Lübecker’s“ Bester Bucht!
-					p(style='display: inline; margin: 7% 15px 10px 0') 
+					p(style='display: inline; margin: 0px 15px 10px 0') 
+						strong Bretterbutze. Grömitz. Baby.
+						br
+						| (Bleibt nicht nur im Kopf, sondern auch im Ohr!)
+					p(style='display: inline; margin: 4% 15px 10px 0') 
 						| Leinen los zu Euren Butzen:
 					ul.actions(style='\
 					display: flex;\
@@ -56,8 +60,8 @@ block content
 					+picture("/assets/images","butzen/terassenbutze/11",['jpg'], alt="")
 					+picture("/assets/images","butzen/terassenbutze/2",['jpg'], alt="")
 					+picture("/assets/images","butzen/terassenbutze/5",['jpg'], alt="")
-					+picture("/assets/images","butzen/strandallee/Bretterbutze-12",['jpg'], alt="")
-					+picture("/assets/images","butzen/strandallee/Bretterbutze-9",['jpg'], alt="")
+					+picture("/assets/images","butzen/strandallee/Bretterbutze-8",['jpg'], alt="")
+					+picture("/assets/images","butzen/strandallee/neu/wohnzimmer-neu-tiny",['jpg'], alt="")
 					+picture("/assets/images","butzen/strandallee/neu/strand_essen_neu",['jpg'], alt="")
 					+picture("/assets/images","butzen/strandallee/neu/strand_nacht",['jpg'], alt="")
 					+picture("/assets/images","butzen/strandallee/neu/strand_heizung_whz",['jpg'], alt="")
@@ -97,7 +101,7 @@ block content
 			// Panel
 			section.panel.banner.left
 				.image.span-2.filtered.tinted(data-position='center')
-					+picture("/assets/images","butzen/strandallee/Bretterbutze-7",['jpg'], alt="")
+					+picture("/assets/images","butzen/strandallee/neu/strand_strandkorb_neu",['jpg'], alt="")
 			section#butze.panel.banner.left.color2
 				.intro.color2
 					h1.major Die Butzen
@@ -113,7 +117,7 @@ block content
 						| ganz weit vorn am Meer! 
 					h3.only-touch Details hier »
 				.image.filtered.tinted.hover(data-position='center')
-					+picture("/assets/images","butzen/strandallee/neu/strand_heizung_whz",['jpg'], alt="")
+					+picture("/assets/images","butzen/strandallee/neu/sofa-neu-1-tiny",['jpg'], alt="")
 			section.panel.spotlight.small.left.color2.butzen.terrassenbutze-modal(style='width: 18rem')
 				.content
 					h2.major #Terrassenbutze
@@ -189,19 +193,38 @@ block content
 							br
 							| Holt Euch die Butze nach Hause!
 
-					.span-5
+					.span-5(style='\
+					display: flex;\
+					align-items: center;\
+					justify-content: space-between;\
+					flex-direction: row;\
+					width: auto !important;\
+					')
 						.table-wrapper
-							table
+							table.align-middle
 								tbody
 									tr
-										td Poster
-										td 19,95 € inkl. Versand
+										td 
+											strong Poster
+										td 19,95 €
 									tr
-										td Postkarte
-										td 2,95 € inkl. Versand
+										td 
+											strong
+												| Tasse 
+												br
+												| (Strandallee, #Terrassenbutze, Meer.Blick.Butze)
+										td 12,95 €
 									tr
-										td Aufkleber
-										td 1,95 € inkl. Versand
+										td 
+											strong Postkarte
+										td 2,95 €
+									tr
+										td 
+											strong Aufkleber
+										td 1,95 €
+							p inkl. Versand
+						div(style='margin-left: 2rem')
+							+picture("/assets/images","brettermerge",['png'], alt="")
 
 			section#gallerie.panel
 				.gallery
@@ -232,6 +255,17 @@ block content
 							+picture("/assets/images","butzen/terassenbutze/23",['jpg'], alt="")
 					a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/bad2.jpg', data-position='center')
 						+picture("/assets/images","butzen/strandallee/bad2",['jpg'], alt="")
+					.group.span-3
+						a.image.filtered.span-3(href='assets/images/butzen/strandallee/neu/strand_nacht.jpg', data-position='center')
+							+picture("/assets/images","butzen/strandallee/neu/strand_nacht",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/butzen/terassenbutze/12.jpg', data-position='center')
+							+picture("/assets/images","butzen/terassenbutze/12",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/butzen/terassenbutze/21.jpg', data-position='left')
+							+picture("/assets/images","butzen/terassenbutze/21",['jpg'], alt="")
+					a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/neu/dusche_2.jpg', data-position='center')
+						+picture("/assets/images","butzen/strandallee/neu/dusche_2",['jpg'], alt="")
+					a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/neu/strand_butzenallee.jpg', data-position='center')
+						+picture("/assets/images","butzen/strandallee/neu/strand_butzenallee",['jpg'], alt="")
 					// <a href="images/butzen/strandallee/tasse.jpg" class="image filtered span-2-5" data-position="center"><img src="images/butzen/strandallee/tasse.jpg"alt="" /></a>
 			section#sport.panel.spotlight.large.left
 				.content.span-4-5
@@ -540,8 +574,8 @@ block content
 							a(href='/assets/images/butzen/strandallee/neu/wohnzimmer-neu-tiny.jpg' data-fancybox data-caption='Strandallee #2')
 								img(src='/assets/images/butzen/strandallee/neu/wohnzimmer-neu-tiny.jpg' alt='')
 						.image.filtered.tinted
-							a(href='/assets/images/butzen/strandallee/neu/strand_heizung_whz.jpg' data-fancybox data-caption='Strandallee #2')
-								img(src='/assets/images/butzen/strandallee/neu/strand_heizung_whz.jpg' alt='')
+							a(href='/assets/images/butzen/strandallee/neu/strand_essen_neu.jpg' data-fancybox data-caption='Strandallee #3')
+								img(src='/assets/images/butzen/strandallee/neu/strand_essen_neu.jpg' alt='')
 						br
 						br
 					.surfer-bg

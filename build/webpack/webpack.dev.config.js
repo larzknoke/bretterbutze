@@ -49,7 +49,7 @@ module.exports = merge(webpackBaseConfig, {
 		contentBase: paths.dist,
 		index: "index.html",
 		host: "localhost",
-		port: 3000,
+		port: 3001,
 		open: false,
 	},
 
