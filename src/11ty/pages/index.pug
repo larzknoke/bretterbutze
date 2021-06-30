@@ -97,7 +97,8 @@ block content
 							| verzichten wollen.
 							br
 							br
-							strong &ldquo;Alles Dope, wenn Du da bist&rdquo;, Cro
+							strong 
+								| “Pack, pack deine Sachen ein. Sonnenmilch und ne Flasche Wein. Lass, lass mich dein Beachball sein, creme mir den Rücken ein!“ Ozean, WHT!?!
 			// Panel
 			section.panel.banner.left
 				.image.span-2.filtered.tinted(data-position='center')
@@ -141,48 +142,7 @@ block content
 						strong  Meer.Blick.
 					h3.only-touch Details hier »
 				.image.filtered.tinted.hover(data-position='center')
-					+picture("/assets/images","renovieren",['jpg'], alt="")
-			//
-				<section class="panel banner left color2" id="butze">
-				<div class="intro color2">
-				<h1 class="major">Die Butze</h1>
-				</div>
-				<div class="inner columns aligned">
-				<div class="span-2-25" style="z-index: 100">
-				<h3 class="major">BOSS Size</h3>
-				<span>Nicht viel sabbeln...Details in a nutshell:</span>
-				<ul class="altOFF">
-				<li>2 ZKB I 40qm I 4 Piraten (m/w/d)</li>
-				<li>Rainforest Duschkabine mit Fön</li>
-				</ul>
-				<h3 class="major">VALUE for Money</h3>
-				<span>All Inclusive Butzen</span>
-				<ul class="altOFF">
-				<li style="line-height: 20px">
-				Doppelbett 140*200 <br />
-				<span style="font-size: 0.85em"
-				>(Bitte vergesst Eure Schnuffelbettwäsche nicht!)</span
-				>
-				</li>
-				<li>Schlafcouch</li>
-				<li>Flat TV</li>
-				<li>Playstation 1</li>
-				<li>Marshall Bluetooth Boom Box</li>
-				</ul>
-				</div>
-				<div class="span-2-25" style="z-index: 100">
-				<h3 class="major">Kitchen Highlights</h3>
-				<ul class="altOFF">
-				<li>Herd, Ceranfeld, Spülmaschine</li>
-				<li>Russel & Hobbs Toaster & Wasserkocher</li>
-				<li>Nespresso Kaffemaschine</li>
-				</ul>
-				<br />
-				</div>
-				<div class="surfer-bg"></div>
-				</div>
-				</section>
-			// Panel
+					+picture("/assets/images/butzen/meerblick","meer3",['jpg'], alt="")
 			section#merge.panel.color4-alt
 				.inner.columns.divided
 					.span-1-5
@@ -238,6 +198,8 @@ block content
 							+picture("/assets/images","butzen/terassenbutze/4",['jpg'], alt="")
 						a.image.filtered.span-3(href='assets/images/butzen/terassenbutze/2.jpg', data-position='center')
 							+picture("/assets/images","butzen/terassenbutze/2",['jpg'], alt="")
+					a.image.filtered.span-2-5(href='assets/images/postkarten/post_terrasse', data-position='top')
+						+picture("/assets/images","postkarten/post_terrasse",['jpg'], alt="")
 					a.image.filtered.span-2-5(href='assets/images/butzen/terassenbutze/1.jpg', data-position='center')
 						+picture("/assets/images","butzen/terassenbutze/1",['jpg'], alt="")
 					.group.span-3
@@ -252,10 +214,17 @@ block content
 					.group.span-3
 						a.image.filtered.span-3(href='assets/images/butzen/strandallee/neu/strand_nacht.jpg', data-position='center')
 							+picture("/assets/images","butzen/strandallee/neu/strand_nacht",['jpg'], alt="")
-						a.image.filtered.span-1-5(href='assets/images/butzen/terassenbutze/12.jpg', data-position='center')
-							+picture("/assets/images","butzen/terassenbutze/12",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/postkarten/post_meer.jpg', data-position='center')
+							+picture("/assets/images/postkarten","post_meer",['jpg'], alt="")
 						a.image.filtered.span-1-5(href='assets/images/butzen/terassenbutze/21.jpg', data-position='left')
 							+picture("/assets/images","butzen/terassenbutze/21",['jpg'], alt="")
+					.group.span-3
+						a.image.filtered.span-1-5(href='assets/images/butzen/terassenbutze/12.jpg', data-position='center')
+							+picture("/assets/images","butzen/terassenbutze/12",['jpg'], alt="")
+						a.image.filtered.span-1-5(href='assets/images/postkarten/post_strand.jpg', data-position='left')
+							+picture("/assets/images","postkarten/post_strand",['jpg'], alt="")
+						a.image.filtered.span-3(href='assets/images/butzen/meerblick/meer4.jpg', data-position='center')
+							+picture("/assets/images","butzen/meerblick/meer4",['jpg'], alt="")
 					a.image.filtered.span-1-5(href='assets/images/butzen/strandallee/neu/dusche_2.jpg', data-position='center')
 						+picture("/assets/images","butzen/strandallee/neu/dusche_2",['jpg'], alt="")
 					a.image.filtered.span-2-5(href='assets/images/butzen/strandallee/neu/strand_butzenallee.jpg', data-position='center')
@@ -379,7 +348,8 @@ block content
 						| Germany
 				.inner.columns.divided
 					.span-3-25
-						h3 Ahoi Halunke, 
+						h3 
+							| Ahoi Haudegen: innen 
 							| auf Deine elektronische Flaschenpost antworten wir gern zügig! 
 						form#contact-form(accept-charset='UTF-8', action='mail.php', method='POST')
 							.fields
@@ -619,52 +589,33 @@ block content
 				.intro.color2
 					+picture("/assets/images","logo_meerblickbutze",['png'], alt="", classname="butzen-logo")
 					strong(style='margin: 0 auto') Bretterbutze Gr&ouml;mitz&reg;
-					//
-						<h3 class="">Eure Butze</h3>
-						<h1 class="major">Meer.Blick.Butze</h1>
-						<br />
-						<h3>Was geht Meer.Blick.Butze?</h3>
-						<p>
-						<strong>Der Hattrick und</strong> das kleine Geschwisterchen der
-						Bretterbutze Strandallee. Ideal für 2 Halunken, ganz weit vorn und
-						somit mit
-						<strong>Meer.Blick.</strong>
-						</p>
 				.inner.columns.aligned
 					.span-2-25(style='z-index: 100')
-						h3.major High Life
-						strong(style='margin-bottom: 10px; display: block') Nicht viel sabbeln...Details in der Fischbu&#x308;chse:
+						strong(style='margin-bottom: 20px; display: block') Nicht viel sabbeln...Details in der Fischbu&#x308;chse:
+						h3.major BOSS Size
 						ul.altOFF.anchor-list
-							li 1 Zimmer Koje I 25 qm Wohnfl&auml;che
-							li 2 Piraten (m/w/d)
-							li Duschkabine
-						h3.major Die inneren Werte
-						strong(style='margin-bottom: 10px; display: block') Alles Inklusive
-						//
-							<ul class="altOFF anchor-list">
-							<li>
-							SMART: Hochbett 140*200cm mit integriertem Kleiderschrank
-							</li>
-							<li>Schlafcouch 140*200cm</li>
-							<li>Sony Flat TV</li>
-							<li>Retro Playstation</li>
-							<li>Bose Bluetooth Box</li>
-							<li>Landmann Kugelgrill</li>
-							<li>2 chilly Billy Liegestühle + Astra Tisch</li>
-							<li>2 Penny Boards</li>
-							<li>
-							<strong>Zusatzleistungen:</strong> Wäschepaket (Bettbezug
-							(Kissen & Decke) plus Spannbettlaken, 1 Handtuch) Preis auf
-							Anfrage
-							</li>
-							</ul>
-					.span-2-25(style='z-index: 100')
+							li 1 Zimmer Koje I 25qm
+							li 3 Piraten (m/w/d)
+							li Nasszelle
+						h3.major Butzen Inclusive
+						ul.altOFF.anchor-list
+							li 160 * 200 Schrankbett plus Sofa
+							li Flat TV
 						h3.major Pu&#x308;tt &amp; Pann
-						ul.altOFF.anchor-list
-							li Herd, Ceranfeld, Spu&#x308;lmaschine
-							li Ku&#x308;hlschrank mit Gefrierfach
-							li Wasserkocher
-							li Nespresso Kapselmaschine
-							li Old but Gold Keramik Kaffeefilter
+						ul.altOFF.anchor-list.anchor-list
+							li Ceranfeld, Spülmaschine, Kühlschrank
+							li Toaster, Wasserkocher, Kaffeemaschine
+						br
+					.span-2-25(style='z-index: 100')
+						.image.filtered.tinted
+							a(href='/assets/images/butzen/meerblick/meer1.jpg' data-fancybox data-caption='Meer.Blick.Butze #1')
+								img(src='/assets/images/butzen/meerblick/meer1.jpg' alt='')
+						.image.filtered.tinted
+							a(href='/assets/images/butzen/meerblick/meer2.jpg' data-fancybox data-caption='Meer.Blick.Butze #2')
+								img(src='/assets/images/butzen/meerblick/meer2.jpg' alt='')
+						.image.filtered.tinted
+							a(href='/assets/images/butzen/meerblick/meer4.jpg' data-fancybox data-caption='Meer.Blick.Butze #3')
+								img(src='/assets/images/butzen/meerblick/meer4.jpg' alt='')
+						br
 						br
 					.surfer-bg
