@@ -693,6 +693,29 @@ ul.anchor-list {
 	}
 }
 
+@include breakpoint('<=medium') {
+	#wrapper > .start-player {
+		z-index: 9999;
+		top: 13px;
+		right: auto;
+		left: 20px;
+	}
+	
+	.start-player p {
+		display: none;
+	}
+	.start-player img {
+		opacity: 0.85;
+		width: 2.85rem !important;
+	}
+}
+@include breakpoint('<=xsmall') {
+		#wrapper > .start-player {
+			right: 20px !important;
+			left: auto !important;
+		}
+}
+
 
 .butzen-links {
 	font-family: 'abegan'; 
